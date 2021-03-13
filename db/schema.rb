@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_095250) do
+ActiveRecord::Schema.define(version: 2021_03_13_105851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2021_03_13_095250) do
     t.string "category"
     t.text "description"
     t.decimal "price"
-    t.string "music_style"
     t.string "address_street"
     t.string "address_zipcode"
     t.string "address_city"
