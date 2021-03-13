@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% unless user_signed_in? %>
+  <div class="login-wrap pb-5">
+    <div class="img d-flex align-items-center justify-content-center main-img"></div>
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label" for="customCheck1">En continuant, j'accepte les Conditions d'utilisation et j'aipris connaissance de la Politique de confedentialite de Barathon, ainsi que de la politique en matiere de cookies de Barathon.</label>
+    </div>
+  </div>
+
+  <div class="col-md-6 text-nowrap text-dark">
+    <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-outline border border-dark btn-default w-100 hm-sign' %>
+    <%= link_to 'Register', new_user_registration_path, class: 'btn btn-dark w-100 hm-signup' %>
+  </div>
+<% else %>
+  <p>You are now signed in.</p>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn btn-dark w-100 hm-signup' %>
+<% end %>
