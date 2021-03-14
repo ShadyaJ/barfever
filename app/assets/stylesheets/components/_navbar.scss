@@ -10,3 +10,25 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-item {
+  color: $purple;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.navbar-item svg {
+  width: 55px;
+  font-size: 26px;
+}
+
+.navbar-item p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.dropup .dropdown-toggle::after {
+  content: none;
+}

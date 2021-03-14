@@ -1,35 +1,76 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-bottom">
+  <% if user_signed_in? %>
+    <% if current_user.status == 'I own the party!' %>
+        <%= link_to root_path, class: "navbar-item" do %>
+          <span class="iconify" data-icon="akar-icons:home" data-inline="false"></span>
+          <p class="text-center">Home</p>
+        <% end %>
+        <%= link_to "#", class: "navbar-item" do %>
+          <span class="iconify" data-icon="carbon:bar" data-inline="false"></span>
+          <p class="text-center">My Bar</p>
+        <% end %>
+        <%= link_to "#", class: "navbar-item" do %>
+          <span class="iconify ml-2" data-icon="vs:party" data-inline="false"></span>
+          <p class="text-center">My Events</p>
+        <% end %>
+        <%= link_to "#", class: "navbar-item" do %>
+          <span class="iconify ml-1" data-icon="system-uicons:message-writing" data-inline="false"></span>
+          <p class="text-center">Notifications</p>
+        <% end %>
+        <div class="navbar-item dropup">
+        <%= link_to "#", class: "navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+          <span class="iconify" data-icon="clarity:user-line" data-inline="false"></span>
+          <p class="text-center">Profile</p>
+        <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+      </div>
+    <% else %>
+      <%= link_to root_path, class: "navbar-item" do %>
+        <span class="iconify" data-icon="akar-icons:home" data-inline="false"></span>
+        <p class="text-center">Home</p>
       <% end %>
-    </ul>
-  </div>
+      <%= link_to "#", class: "navbar-item" do %>
+        <span class="iconify" data-icon="carbon:bar" data-inline="false"></span>
+        <p class="text-center">Bars</p>
+      <% end %>
+      <%= link_to "#", class: "navbar-item" do %>
+        <span class="iconify ml-2" data-icon="vs:party" data-inline="false"></span>
+        <p class="text-center">Events</p>
+      <% end %>
+      <%= link_to "#", class: "navbar-item" do %>
+        <span class="iconify ml-1" data-icon="system-uicons:message-writing" data-inline="false"></span>
+        <p class="text-center">Notifications</p>
+      <% end %>
+      <div class="navbar-item dropup">
+        <%= link_to "#", class: "navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+          <span class="iconify" data-icon="clarity:user-line" data-inline="false"></span>
+          <p class="text-center">Profile</p>
+        <% end %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to root_path, class: "navbar-item" do %>
+      <span class="iconify" data-icon="akar-icons:home" data-inline="false"></span>
+      <p class="text-center">Home</p>
+    <% end %>
+    <%= link_to "#", class: "navbar-item" do %>
+      <span class="iconify" data-icon="carbon:bar" data-inline="false"></span>
+      <p class="text-center">Bars</p>
+    <% end %>
+    <%= link_to "#", class: "navbar-item" do %>
+      <span class="iconify ml-1" data-icon="vs:party" data-inline="false"></span>
+      <p class="text-center">Events</p>
+    <% end %>
+    <%= link_to new_user_session_path, class: "navbar-item" do %>
+      <span class="iconify ml-2" data-icon="la:glass-cheers" data-inline="false"></span>
+      <p class="text-center">Join the party!</p>
+    <% end %>
+  <% end %>
 </div>
