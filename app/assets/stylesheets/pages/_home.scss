@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.main-img{
+  background: url('bar.jpg');
+}
+
+.welcome-img{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hm-sign, .hm-signup {
+    width: 50% !important;
+  }
+}
