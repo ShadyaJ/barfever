@@ -1,0 +1,26 @@
+.banner-home {
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('img-banner-homepage.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+#input-banner-home-group {
+  width: 200px;
+  display: block;
+  margin : 0 auto;
+}
+
+#input-banner-home {
+  border-radius: 20px;
+  display: block;
+  margin : 0 auto;
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#container-banner-home {
+  text-align: center;
+}
