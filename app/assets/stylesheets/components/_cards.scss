@@ -1,0 +1,92 @@
+/*Cards Bars small*/
+.card-bar-small {
+  height: 192px;
+  width: 168px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-bar-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
+}
+
+.card-bar-info .card-bar-event {
+  width: 121px;
+  position: absolute;
+  right: 10px;
+  top: -16px;
+}
+
+.card-bar-event{
+  display: flex;
+  background-color: #7C35C3;
+  border-radius: 5px;
+  padding: 2px;
+  width: 121px;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.card-bar-title h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-bar-review {
+  display: flex;
+  align-items: center;
+  .stars {
+    padding-right: 10px;
+    margin: 0;
+  }
+  .review p {
+  font-size: 10px;
+  margin: 0;
+  }
+
+  .stars p {
+    font-size: 10px;
+    margin: 0;
+  }
+}
+
+
+.card-bar-position {
+  display: flex;
+  margin: 0;
+  padding-top: 16px;
+}
+
+.position-meter {
+  border-radius: 5px;
+  background-color: grey;
+
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+
+.position-text p {
+  font-size: 10px;
+  margin: 0;
+  padding-left: 10px;
+}
