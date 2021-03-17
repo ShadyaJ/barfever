@@ -25,25 +25,7 @@
   padding-top: 16px;
 }
 
-.position-meter {
-  border-radius: 5px;
-  background-color: grey;
-
-  p {
-    font-size: 10px;
-    margin: 0;
-    padding-right: 3px;
-    padding-left: 3px;
-  }
-}
-
-.position-text p {
-  font-size: 10px;
-  margin: 0;
-  padding-left: 10px;
-}
-
-
+/*-------------Cards Bars small-----------------*/
 /*-------------Cards Bars larg-----------------*/
 .card-bar-larg {
   height: 188px;
@@ -75,27 +57,8 @@
   margin: 0;
 }
 
-.position-meter {
-  border-radius: 5px;
-  background-color: grey;
-
-  p {
-    font-size: 10px;
-    margin: 0;
-    padding-right: 3px;
-    padding-left: 3px;
-  }
-}
-
-.position-text p {
-  font-size: 10px;
-  margin: 0;
-  padding-left: 10px;
-}
-
-
+/*-------------Cards Bars larg-----------------*/
 /*--------------------Cards Bars element-------------------*/
-
 .card-bar-info .card-bar-event {
   width: 121px;
   position: absolute;
@@ -142,6 +105,11 @@
   }
 }
 
+.position-icon i {
+  margin: 0;
+  padding-left: 10px;
+}
+/*--------------------Cards Bars element-------------------*/
 /*--------------------Cards event small-------------------*/
 
 .card-event-small {
@@ -168,7 +136,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding-top: 16px;
+  padding-top: 4px;
 }
 
 .card-event-position{
@@ -187,18 +155,62 @@
     padding-left: 3px;
   }
 }
-
-.position-text p {
-  font-size: 10px;
-  margin: 0;
+/*--------------------Cards event small-------------------*/
+/*--------------------Cards event larg-------------------*/
+.card-event-larg {
+  height: 287px;
+  width: 348px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-event-larg-info {
+  padding-right: 10px;
   padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
 }
 
+.card-event-larg-position-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-top: 8px;
+}
+
+.card-event-larg-info .card-event-larg-event {
+  width: 180px;
+  position: absolute;
+  right: 16px;
+  top: -16px;
+}
+
+.card-event-larg-event{
+  display: flex;
+  background-color: #7C35C3;
+  border-radius: 5px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+/*--------------------Cards event larg-------------------*/
 /*--------------------Cards event element-------------------*/
 .card-event-info .card-event-event {
-  width: 121px;
+  width: 136px;
   position: absolute;
-  right: 10px;
+  right: 16px;
   top: -16px;
 }
 
@@ -207,7 +219,6 @@
   background-color: #7C35C3;
   border-radius: 5px;
   padding: 2px;
-  width: 121px;
   justify-content: center;
   align-items: center;
 
@@ -228,8 +239,7 @@
   font-size: 10px;
   margin: 0;
 }
-
-
+/*--------------------Cards event element-------------------*/
 
 
 
