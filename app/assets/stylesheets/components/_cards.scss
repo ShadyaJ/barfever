@@ -1,4 +1,4 @@
-/*Cards Bars small*/
+/*-------------Cards Bars small-----------------*/
 .card-bar-small {
   height: 192px;
   width: 168px;
@@ -18,6 +18,82 @@
   position: relative;
   }
 }
+
+.card-bar-position {
+  display: flex;
+  margin: 0;
+  padding-top: 16px;
+}
+
+.position-meter {
+  border-radius: 5px;
+  background-color: grey;
+
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+.position-text p {
+  font-size: 10px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+
+/*-------------Cards Bars larg-----------------*/
+.card-bar-larg {
+  height: 188px;
+  width: 348px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-bar-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
+}
+
+.card-bar-review-position {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-bar-larg-position {
+  display: flex;
+  margin: 0;
+}
+
+.position-meter {
+  border-radius: 5px;
+  background-color: grey;
+
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+
+.position-text p {
+  font-size: 10px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+/*--------------------Cards Bars element-------------------*/
 
 .card-bar-info .card-bar-event {
   width: 121px;
@@ -65,28 +141,3 @@
   }
 }
 
-
-.card-bar-position {
-  display: flex;
-  margin: 0;
-  padding-top: 16px;
-}
-
-.position-meter {
-  border-radius: 5px;
-  background-color: grey;
-
-  p {
-    font-size: 10px;
-    margin: 0;
-    padding-right: 3px;
-    padding-left: 3px;
-  }
-}
-
-
-.position-text p {
-  font-size: 10px;
-  margin: 0;
-  padding-left: 10px;
-}
