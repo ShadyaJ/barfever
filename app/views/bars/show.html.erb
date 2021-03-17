@@ -1,0 +1,27 @@
+<img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YmFyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="" width="100%">
+
+<div class="show-container">
+  <div class="card-bar-show">
+    <div class="card-bar-show-body">
+      <div class="card-bar-show-description">
+        <h3><%= @bar.name %></h3>
+        <h6>$$$</h6>
+        <p><%= @bar.description %></p>
+        <div class="card-bar-show-reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <span>10 Reviews</span>
+        </div>
+      </div>
+      <h5 class="card-bar-show-category"><%= @bar.category %></h5>
+    </div>
+    <div class="card-bar-show-buttons">
+      <%= link_to "Guest List", "#", class: "btn btn-pink" %>
+      <%= link_to "Book Table", "#", class: "btn btn-outline-pink" %>
+      <%= link_to "Add Review", "#", class: "btn btn-outline-pink" %>
+    </div>
+  </div>
+</div>
