@@ -1,0 +1,255 @@
+/*-------------Cards Bars small-----------------*/
+.card-bar-small {
+  height: 192px;
+  width: 168px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-bar-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
+}
+
+.card-bar-position {
+  display: flex;
+  margin: 0;
+  padding-top: 16px;
+}
+
+/*-------------Cards Bars small-----------------*/
+/*-------------Cards Bars larg-----------------*/
+.card-bar-larg {
+  height: 188px;
+  width: 348px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-bar-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
+}
+
+.card-bar-review-position {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-bar-larg-position {
+  display: flex;
+  margin: 0;
+}
+
+/*-------------Cards Bars larg-----------------*/
+/*--------------------Cards Bars element-------------------*/
+.card-bar-info .card-bar-event {
+  width: 121px;
+  position: absolute;
+  right: 10px;
+  top: -16px;
+}
+
+.card-bar-event{
+  display: flex;
+  background-color: #7C35C3;
+  border-radius: 5px;
+  padding: 2px;
+  width: 121px;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.card-bar-title h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-bar-review {
+  display: flex;
+  align-items: center;
+  .stars {
+    padding-right: 10px;
+    margin: 0;
+  }
+  .review p {
+  font-size: 10px;
+  margin: 0;
+  }
+
+  .stars p {
+    font-size: 10px;
+    margin: 0;
+  }
+}
+
+/*--------------------Cards Bars element-------------------*/
+/*--------------------Cards event small-------------------*/
+
+.card-event-small {
+  height: 192px;
+  width: 168px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-event-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
+}
+.card-event-position-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.card-event-position{
+  display: flex;
+  margin: 0;
+}
+
+
+/*--------------------Cards event small-------------------*/
+/*--------------------Cards event larg-------------------*/
+.card-event-larg {
+  height: 287px;
+  width: 348px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+    img {
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .card-event-larg-info {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 16px;
+  position: relative;
+  }
+}
+
+.card-event-larg-position-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-top: 8px;
+}
+
+.card-event-larg-info .card-event-larg-event {
+  width: 180px;
+  position: absolute;
+  right: 16px;
+  top: -16px;
+}
+
+.card-event-larg-event{
+  display: flex;
+  background-color: #7C35C3;
+  border-radius: 5px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+/*--------------------Cards event larg-------------------*/
+/*--------------------Cards event element-------------------*/
+.card-event-info .card-event-event {
+  width: 136px;
+  position: absolute;
+  right: 16px;
+  top: -16px;
+}
+
+.card-event-event{
+  display: flex;
+  background-color: #7C35C3;
+  border-radius: 5px;
+  padding: 2px;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.card-event-title h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.price p {
+  font-size: 10px;
+  margin: 0;
+}
+/*--------------------Cards event element-------------------*/
+/*--------------------Cards elements-------------------*/
+
+.position-icon i {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.position-meter {
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding: 5px;
+    // padding-left: 3px;
+  }
+}
+
+/*--------------------Cards elements-------------------*/
+
+
+
+
+
+
+
+
+
+
