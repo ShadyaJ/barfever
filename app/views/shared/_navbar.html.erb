@@ -2,24 +2,24 @@
   <% if user_signed_in? %>
     <% if current_user.status == 'I own the party!' %>
         <%= link_to root_path, class: "navbar-item" do %>
-          <span class="iconify" data-icon="akar-icons:home" data-inline="false"></span>
+          <%= svg('icon-home') %>
           <p class="text-center">Home</p>
         <% end %>
         <%= link_to "#", class: "navbar-item" do %>
-          <span class="iconify" data-icon="carbon:bar" data-inline="false"></span>
+          <%= svg('icon-bar') %>
           <p class="text-center">My Bar</p>
         <% end %>
-        <%= link_to "#", class: "navbar-item" do %>
-          <span class="iconify ml-2" data-icon="vs:party" data-inline="false"></span>
+        <%= link_to "#", class: "icon-cheers navbar-item" do %>
+          <%= svg('icon-event') %>
           <p class="text-center">My Events</p>
         <% end %>
-        <%= link_to "#", class: "navbar-item" do %>
-          <span class="iconify ml-1" data-icon="system-uicons:message-writing" data-inline="false"></span>
+        <%= link_to "#", class: "icon-bigger icon-cheers navbar-item" do %>
+          <%= svg('icon-notification') %>
           <p class="text-center">Notifications</p>
         <% end %>
-        <div class="navbar-item dropup">
+        <div class="icon-bigger navbar-item dropup">
         <%= link_to "#", class: "navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-          <span class="iconify" data-icon="clarity:user-line" data-inline="false"></span>
+          <%= svg('icon-user') %>
           <p class="text-center">Profile</p>
         <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -29,24 +29,24 @@
       </div>
     <% else %>
       <%= link_to root_path, class: "navbar-item" do %>
-        <span class="iconify" data-icon="akar-icons:home" data-inline="false"></span>
+        <%= svg('icon-home') %>
         <p class="text-center">Home</p>
       <% end %>
       <%= link_to "#", class: "navbar-item" do %>
-        <span class="iconify" data-icon="carbon:bar" data-inline="false"></span>
+        <%= svg('icon-bar') %>
         <p class="text-center">Bars</p>
       <% end %>
       <%= link_to "#", class: "navbar-item" do %>
-        <span class="iconify ml-2" data-icon="vs:party" data-inline="false"></span>
+        <%= svg('icon-event') %>
         <p class="text-center">Events</p>
       <% end %>
-      <%= link_to "#", class: "navbar-item" do %>
-        <span class="iconify ml-1" data-icon="system-uicons:message-writing" data-inline="false"></span>
+      <%= link_to "#", class: "icon-bigger icon-notification navbar-item" do %>
+        <%= svg('icon-notification') %>
         <p class="text-center">Notifications</p>
       <% end %>
       <div class="navbar-item dropup">
-        <%= link_to "#", class: "navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-          <span class="iconify" data-icon="clarity:user-line" data-inline="false"></span>
+        <%= link_to "#", class: "icon-bigger navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+          <%= svg('icon-user') %>
           <p class="text-center">Profile</p>
         <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -57,19 +57,19 @@
     <% end %>
   <% else %>
     <%= link_to root_path, class: "navbar-item" do %>
-      <span class="iconify" data-icon="akar-icons:home" data-inline="false"></span>
+      <%= svg('icon-home') %>
       <p class="text-center">Home</p>
     <% end %>
     <%= link_to "#", class: "navbar-item" do %>
-      <span class="iconify" data-icon="carbon:bar" data-inline="false"></span>
+      <%= svg('icon-bar') %>
       <p class="text-center">Bars</p>
     <% end %>
     <%= link_to "#", class: "navbar-item" do %>
-      <span class="iconify ml-1" data-icon="vs:party" data-inline="false"></span>
+      <%= svg('icon-event') %>
       <p class="text-center">Events</p>
     <% end %>
-    <%= link_to new_user_session_path, class: "navbar-item" do %>
-      <span class="iconify ml-2" data-icon="la:glass-cheers" data-inline="false"></span>
+    <%= link_to new_user_session_path, class: "icon-cheers navbar-item" do %>
+      <%= svg('icon-cheers') %>
       <p class="text-center">Join the party!</p>
     <% end %>
   <% end %>

@@ -1,4 +1,42 @@
+// to delete after replacement with cards!!
+.replace-with-cards {
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.replace-with-map {
+    background-color: lightgray;
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+}
+
 // Specific CSS for your home-page
+.title-with-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homepage-container {
+  margin: 20px 10px 100px;
+}
+
+.homepage-group {
+  margin-bottom: 30px;
+}
+
+.homepage-group h1{
+  font-size: 32px;
+  font-weight: bold;
+  color: $black;
+}
+
+.homepage-group h2{
+  font-size: 24px;
+  color: $black;
+}
 
 // btn filter home specifities
 #icon-disc {
@@ -13,4 +51,8 @@
 
 #btn-filter-right {
   border-radius: 0 10px 0 0;
+}
+
+.title-with-btn a {
+  background-color: $pink;
 }

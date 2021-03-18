@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  border: 2px solid whitesmoke;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,14 +15,14 @@
 .navbar-item {
   color: $purple;
   &:hover {
-    color: $black;
     text-decoration: none;
+    color: $purple;
   }
 }
 
 .navbar-item svg {
-  width: 55px;
   font-size: 26px;
+  width: 50px;
 }
 
 .navbar-item p {
@@ -31,4 +32,18 @@
 
 .dropup .dropdown-toggle::after {
   content: none;
+}
+
+// icons specificities
+
+.icon-cheers svg {
+  width: 70px;
+}
+
+.icon-notification svg {
+  width: 64px;
+}
+
+.icon-bigger svg {
+  font-size: 28px;
 }
