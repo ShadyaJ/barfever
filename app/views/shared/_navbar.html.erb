@@ -25,17 +25,15 @@
             <p>Messages</p>
           <% end %>
       </div>
-      <div class="container-element-navbar">
-        <div class="navbar-item dropup">
-          <%= link_to "#", class: "icon-bigger dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-            <%= svg('icon-user') %>
-            <p>Profile</p>
-          <% end %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-        </div>
+      <div class="container-element-navbar dropup">
+        <%= link_to "#", class: "icon-bigger dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+          <%= svg('icon-user') %>
+          <p>Profile</p>
+        <% end %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
       </div>
     <% else %>
       <div class="container-element-navbar">
@@ -62,17 +60,15 @@
             <p>Messages</p>
           <% end %>
       </div>
-      <div class="container-element-navbar">
-        <div class="navbar-item dropup">
-          <%= link_to "#", class: "icon-bigger dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-            <%= svg('icon-user') %>
-            <p>Profile</p>
-          <% end %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-        </div>
+      <div class="container-element-navbar dropup">
+        <%= link_to "#", class: "icon-bigger dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+          <%= svg('icon-user') %>
+          <p>Profile</p>
+        <% end %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
       </div>
     <% end %>
   <% else %>

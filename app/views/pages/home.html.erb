@@ -7,29 +7,29 @@
   </div>
 </div>
 
-<div>
+<div class="container-btn-filters">
   <div class="btn-filter-list">
     <div class="btn-filter-home" id="btn-filter-left">
       <%= link_to "#" do %>
-        <span class="iconify" data-icon="fluent:drink-beer-20-regular" data-inline="false"></span>
+        <%= svg('icon-beer') %>
         <p>Bar/Pub</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
       <%= link_to "#" do %>
-        <span class="iconify" data-icon="simple-icons:discogs" data-inline="false" id="icon-disc"></span>
+        <%= svg('icon-nightclub') %>
         <p>Nightclub</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
       <%= link_to "#" do %>
-        <span class="iconify" data-icon="grommet-icons:lounge" data-inline="false"></span>
+        <%= svg('icon-lounge') %>
         <p>Lounge</p>
       <% end %>
     </div>
     <div class="btn-filter-home" id="btn-filter-right">
       <%= link_to "#" do %>
-        <span class="iconify" data-icon="la:umbrella-beach" data-inline="false"></span>
+        <%= svg('icon-terrasse') %>
         <p>Terrasse</p>
       <% end %>
     </div>
@@ -38,7 +38,7 @@
     <div class="btn-filter-home btn-filter-events">
       <%= link_to "#",id:"filter-events" do %>
         <p>Events</p>
-        <span class="iconify" data-icon="bi:calendar-event" data-inline="false"></span>
+        <%= svg('icon-calendar') %>
       <% end %>
     </div>
   </div>
