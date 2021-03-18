@@ -20,9 +20,9 @@
 <div class="show-container">
   <div class="card-bar-show">
     <div class="card-bar-show-body">
-      <div class="card-bar-show-description">
-        <h3><%= @bar.name %></h3>
-        <h6>$$$</h6>
+        <h6 class="card-bar-show-category"><%= @bar.category %></h6>
+        <h4><%= @bar.name %></h4>
+        <h6 class="card-bar-price-grey"><%= @bar.price %></h6>
         <p><%= @bar.description %></p>
         <div class="card-bar-show-reviews">
           <i class="fas fa-star"></i>
@@ -32,8 +32,7 @@
           <i class="fas fa-star"></i>
           <span>10 Reviews</span>
         </div>
-      </div>
-      <h5 class="card-bar-show-category"><%= @bar.category %></h5>
+
     </div>
     <div class="card-bar-show-buttons">
       <%= link_to "Guest List", "#", class: "btn btn-pink" %>

@@ -3,17 +3,16 @@
   background-color: white;
 }
 
-.card-bar-show-body{
-  display: flex;
-  justify-content: space-between;
-}
-
 .card-bar-show-category {
-  margin: 6px;
+  color:#D83F87;
 }
 
 .card-bar-show-buttons {
   margin-top: 18px;
   display: flex;
   justify-content: space-between;
+}
+
+.card-bar-price-grey{
+  color: grey;
 }
