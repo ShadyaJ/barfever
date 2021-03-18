@@ -16,5 +16,11 @@
 }
 
 .section-title {
-  margin-top: 10px;
+  margin-top: 25px;
+}
+
+.event-bar-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
 }
