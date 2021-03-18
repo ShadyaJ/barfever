@@ -105,10 +105,6 @@
   }
 }
 
-.position-icon i {
-  margin: 0;
-  padding-left: 10px;
-}
 /*--------------------Cards Bars element-------------------*/
 /*--------------------Cards event small-------------------*/
 
@@ -144,17 +140,7 @@
   margin: 0;
 }
 
-.position-meter {
-  border-radius: 5px;
-  background-color: grey;
 
-  p {
-    font-size: 10px;
-    margin: 0;
-    padding-right: 3px;
-    padding-left: 3px;
-  }
-}
 /*--------------------Cards event small-------------------*/
 /*--------------------Cards event larg-------------------*/
 .card-event-larg {
@@ -240,8 +226,23 @@
   margin: 0;
 }
 /*--------------------Cards event element-------------------*/
+/*--------------------Cards elements-------------------*/
 
+.position-icon i {
+  margin: 0;
+  padding-left: 10px;
+}
 
+.position-meter {
+  p {
+    font-size: 10px;
+    margin: 0;
+    padding: 5px;
+    // padding-left: 3px;
+  }
+}
+
+/*--------------------Cards elements-------------------*/
 
 
 
