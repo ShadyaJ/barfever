@@ -24,6 +24,11 @@
       <%= link_to "Add Review", "#", class: "btn btn-outline-pink" %>
     </div>
   </div>
+
+  <div id="map"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
   <h5 class="section-title">Photos of the night</h5>
   <div class="photos-night">
     <img class="photo" src="https://images.unsplash.com/photo-1485872299829-c673f5194813?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGFydHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
