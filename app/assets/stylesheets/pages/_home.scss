@@ -13,41 +13,28 @@
     margin-top: 30px;
 }
 
-// Specific CSS for your home-page
-.title-with-btn {
-  display: flex;
-  justify-content: space-between;
-}
-
+// body without banner & btns filters
 .homepage-container {
   margin: 20px 10px 100px;
 }
 
 .homepage-group {
   margin-bottom: 30px;
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: $black; 
+  }
+  h2 {
+    font-size: 24px;
+    color: $black;
+  }
 }
 
-.homepage-group h1{
-  font-size: 32px;
-  font-weight: bold;
-  color: $black;
-}
-
-.homepage-group h2{
-  font-size: 24px;
-  color: $black;
-}
-
-// btn filter home specifities
-
-#btn-filter-left {
-  border-radius: 10px 0 0 0;
-}
-
-#btn-filter-right {
-  border-radius: 0 10px 0 0;
-}
-
-.title-with-btn a {
-  background-color: $pink;
+.title-with-btn {
+  display: flex;
+  justify-content: space-between;
+  a {
+    background-color: $pink;
+  }
 }
