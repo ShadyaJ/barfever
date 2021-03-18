@@ -1,76 +1,104 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-bottom">
   <% if user_signed_in? %>
     <% if current_user.status == 'I own the party!' %>
-        <%= link_to root_path, class: "navbar-item" do %>
+      <div class="container-element-navbar">
+        <%= link_to root_path do %>
           <%= svg('icon-home') %>
-          <p class="text-center">Home</p>
-        <% end %>
-        <%= link_to "#", class: "navbar-item" do %>
+          <p>Home</p>
+        <% end %> 
+      </div>
+      <div class="container-element-navbar">
+        <%= link_to "#", class:"ml-1" do %>
           <%= svg('icon-bar') %>
-          <p class="text-center">My Bar</p>
+          <p>My Bar</p>
         <% end %>
-        <%= link_to "#", class: "icon-cheers navbar-item" do %>
-          <%= svg('icon-event') %>
-          <p class="text-center">My Events</p>
-        <% end %>
-        <%= link_to "#", class: "icon-bigger icon-cheers navbar-item" do %>
-          <%= svg('icon-notification') %>
-          <p class="text-center">Notifications</p>
-        <% end %>
-        <div class="icon-bigger navbar-item dropup">
-        <%= link_to "#", class: "navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-          <%= svg('icon-user') %>
-          <p class="text-center">Profile</p>
-        <% end %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+      </div>
+      <div class="container-element-navbar">
+          <%= link_to "#", class:"ml-2" do %>
+            <%= svg('icon-event') %>
+            <p>My Events</p>
+          <% end %>
+      </div>
+      <div class="container-element-navbar">
+          <%= link_to "#", class:"icon-bigger" do %>
+            <%= svg('icon-notification') %>
+            <p>Messages</p>
+          <% end %>
+      </div>
+      <div class="container-element-navbar">
+        <div class="navbar-item dropup">
+          <%= link_to "#", class: "icon-bigger dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+            <%= svg('icon-user') %>
+            <p>Profile</p>
+          <% end %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+        </div>
       </div>
     <% else %>
-      <%= link_to root_path, class: "navbar-item" do %>
-        <%= svg('icon-home') %>
-        <p class="text-center">Home</p>
-      <% end %>
-      <%= link_to "#", class: "navbar-item" do %>
-        <%= svg('icon-bar') %>
-        <p class="text-center">Bars</p>
-      <% end %>
-      <%= link_to "#", class: "navbar-item" do %>
-        <%= svg('icon-event') %>
-        <p class="text-center">Events</p>
-      <% end %>
-      <%= link_to "#", class: "icon-bigger icon-notification navbar-item" do %>
-        <%= svg('icon-notification') %>
-        <p class="text-center">Notifications</p>
-      <% end %>
-      <div class="navbar-item dropup">
-        <%= link_to "#", class: "icon-bigger navbar-item dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
-          <%= svg('icon-user') %>
-          <p class="text-center">Profile</p>
+      <div class="container-element-navbar">
+        <%= link_to root_path do %>
+          <%= svg('icon-home') %>
+          <p>Home</p>
+        <% end %> 
+      </div>
+      <div class="container-element-navbar">
+        <%= link_to "#", class:"ml-1" do %>
+          <%= svg('icon-bar') %>
+          <p>Bars</p>
         <% end %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+      </div>
+      <div class="container-element-navbar">
+          <%= link_to "#", class:"ml-2" do %>
+            <%= svg('icon-event') %>
+            <p>Events</p>
+          <% end %>
+      </div>
+      <div class="container-element-navbar">
+          <%= link_to "#", class:"icon-bigger" do %>
+            <%= svg('icon-notification') %>
+            <p>Messages</p>
+          <% end %>
+      </div>
+      <div class="container-element-navbar">
+        <div class="navbar-item dropup">
+          <%= link_to "#", class: "icon-bigger dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false do %>
+            <%= svg('icon-user') %>
+            <p>Profile</p>
+          <% end %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+        </div>
       </div>
     <% end %>
   <% else %>
-    <%= link_to root_path, class: "navbar-item" do %>
-      <%= svg('icon-home') %>
-      <p class="text-center">Home</p>
-    <% end %>
-    <%= link_to "#", class: "navbar-item" do %>
-      <%= svg('icon-bar') %>
-      <p class="text-center">Bars</p>
-    <% end %>
-    <%= link_to "#", class: "navbar-item" do %>
-      <%= svg('icon-event') %>
-      <p class="text-center">Events</p>
-    <% end %>
-    <%= link_to new_user_session_path, class: "icon-cheers navbar-item" do %>
-      <%= svg('icon-cheers') %>
-      <p class="text-center">Join the party!</p>
-    <% end %>
+    <div class="container-element-navbar">
+      <%= link_to root_path do %>
+        <%= svg('icon-home') %>
+        <p>Home</p>
+      <% end %>
+    </div>
+    <div class="container-element-navbar">
+      <%= link_to "#", class:"icon-bigger ml-1" do %>
+        <%= svg('icon-bar') %>
+        <p>Bars</p>
+      <% end %>
+    </div>
+    <div class="container-element-navbar">
+      <%= link_to "#", class:"ml-2" do %>
+        <%= svg('icon-event') %>
+        <p>Events</p>
+      <% end %>
+    </div>
+    <div class="container-element-navbar">
+      <%= link_to new_user_session_path, class:"icon-bigger" do %>
+        <%= svg('icon-cheers') %>
+        <p>Join the party!</p>
+      <% end %>
+    </div>
   <% end %>
 </div>

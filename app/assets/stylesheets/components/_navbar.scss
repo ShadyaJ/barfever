@@ -12,36 +12,32 @@
   width: 40px;
 }
 
-.navbar-item {
+.container-element-navbar {
+  text-align: center;
+}
+
+.container-element-navbar a {
   color: $purple;
+  font-size: 26px;
   &:hover {
     text-decoration: none;
     color: $purple;
   }
 }
 
-.navbar-item svg {
-  font-size: 26px;
-  width: 50px;
-}
-
-.navbar-item p {
-  font-size: 12px;
+.container-element-navbar p {
   margin: 0;
+  font-size: 12px;
 }
 
 .dropup .dropdown-toggle::after {
   content: none;
 }
 
-// icons specificities
-
-.icon-cheers svg {
-  width: 70px;
-}
-
-.icon-notification svg {
-  width: 64px;
+.dropdown-menu a{
+  font-size: 18px;
+  color: black;
+  font-weight: lighter;
 }
 
 .icon-bigger svg {
