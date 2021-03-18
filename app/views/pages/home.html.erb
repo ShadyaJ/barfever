@@ -1,2 +1,77 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-home">
+  <div class="container" id="container-banner-home">
+    <div class="input-group input-group-sm mb-3" id="input-banner-home-group">
+      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search by city" id="input-banner-home">
+    </div>
+    <%= link_to "What's nearby?", "" , class: "btn btn-rounded" %>
+  </div>
+</div>
+
+<div class="container-btn-filters">
+  <div class="btn-filter-list">
+    <div class="btn-filter-home" id="btn-filter-left">
+      <%= link_to "#" do %>
+        <%= svg('icon-beer') %>
+        <p>Bar/Pub</p>
+      <% end %>
+    </div>
+    <div class="btn-filter-home">
+      <%= link_to "#" do %>
+        <%= svg('icon-nightclub') %>
+        <p>Nightclub</p>
+      <% end %>
+    </div>
+    <div class="btn-filter-home">
+      <%= link_to "#" do %>
+        <%= svg('icon-lounge') %>
+        <p>Lounge</p>
+      <% end %>
+    </div>
+    <div class="btn-filter-home" id="btn-filter-right">
+      <%= link_to "#" do %>
+        <%= svg('icon-terrasse') %>
+        <p>Terrasse</p>
+      <% end %>
+    </div>
+  </div>
+  <div class="btn-filter-list">
+    <div class="btn-filter-home btn-filter-events">
+      <%= link_to "#",id:"filter-events" do %>
+        <p>Events</p>
+        <%= svg('icon-calendar') %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="homepage-container">
+  <div class="homepage-group">
+    <h1>Trendy bars</h1>
+    <div class="replace-with-cards">
+      <h1>< replace with cards ></h1>
+    </div>
+  </div>
+  <div class="homepage-group">
+    <div class="title-with-btn">
+      <h2>Events nearby</h2>
+      <%= link_to  "Show all", "", class: "btn btn-rounded" %>
+    </div>
+    <div class="replace-with-cards">
+      <h1>< replace with cards ></h1>
+    </div>
+  </div>
+  <div class="homepage-group">
+    <div class="title-with-btn">
+      <h2>Based on your profile</h2>
+      <%= link_to  "Show all", "", class: "btn btn-rounded" %>
+    </div>
+    <div class="replace-with-cards">
+      <h1>< replace with cards ></h1>
+    </div>
+  </div>
+  <div class="homepage-group">
+    <div class="replace-with-map">
+      <h1>< replace with map ></h1>
+    </div>
+  </div>
+</div>

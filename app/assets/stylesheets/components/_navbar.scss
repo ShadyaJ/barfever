@@ -1,12 +1,46 @@
-.navbar-lewagon {
+// style from le wagon
+.navbar-barfever {
   justify-content: space-between;
   background: white;
+  border: 2px solid whitesmoke;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-barfever .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-barfever .navbar-brand img {
   width: 40px;
+}
+
+// navbar elements
+.container-element-navbar {
+  text-align: center;
+  a {
+    color: $purple;
+    font-size: 26px;
+    &:hover {
+      text-decoration: none;
+      color: $purple;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+// specificities
+.dropup .dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown-menu a{
+  font-size: 18px;
+  color: black;
+  font-weight: lighter;
+}
+
+.icon-bigger svg {
+  font-size: 28px;
 }
