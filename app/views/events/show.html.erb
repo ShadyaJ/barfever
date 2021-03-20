@@ -1,0 +1,14 @@
+<section class="event-section pt-5">
+  <div class="container">
+    <%= image_tag 'event.jpg', class: 'w-100' %>
+    <h1 class="text-white centered"><%= @event.name %></h1>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= @event.bar&.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><%= @event.category %></h6>
+        <p class='card-text'><%= @event.date %></p><br>
+        <p class="card-text"><%= @event.description %></p>
+      </div>
+    </div>
+  </div>
+</section>

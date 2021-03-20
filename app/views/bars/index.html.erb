@@ -1,23 +1,28 @@
-<h1> Index of bars</h1>
+<!-- Bar header -->
+  <div class="arrow-back">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+  <div class="bar-header">
+    <div class="title">
+      <h2>Notifications</h2>
+    </div>
+  </div>
 
-<h2>Bars cards</h2>
-<div class="container" style=" display: flex; justify-content: space-between;">
-  <%= render "shared/cards/card-bar-small" %>
-  <%= render "shared/cards/card-bar-small" %>
+
+<!-- Cards container -->
+<div class="container">
+  <% @bars.each do |bar|  %>
+    <%= render 'card-bar-larg', bar: bar%>
+  <% end %>
 </div>
 
-
-<div class="container" style=" padding-top: 20px;">
-  <%= render "shared/cards/card-bar-larg" %>
-</div>
-
-<h2>Events Cards</h2>
-<div class="container" style=" display: flex; justify-content: space-between;">
-  <%= render "shared/cards/card-event-small" %>
-  <%= render "shared/cards/card-event-small" %>
-</div>
-
-
-<div class="container" style=" padding-top: 20px;">
-  <%= render "shared/cards/card-event-larg" %>
+<div class="btn-filter-map">
+  <div class="btn-filter">
+    <i class="fas fa-filter"></i>
+    <p>FILTERS</p>
+  </div>
+  <div class="btn-map">
+    <i class="fas fa-map-marked-alt"></i>
+    <p>MAP</p>
+  </div>
 </div>
