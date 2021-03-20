@@ -1,3 +1,4 @@
+<!-- Banner Homepage -->
 <div class="banner-home">
   <div class="container" id="container-banner-home">
     <div class="input-group input-group-sm mb-3" id="input-banner-home-group">
@@ -7,6 +8,7 @@
   </div>
 </div>
 
+<!-- Group of filters -->
 <div class="container-btn-filters">
   <div class="btn-filter-list">
     <div class="btn-filter-home" id="btn-filter-left">
@@ -44,31 +46,98 @@
   </div>
 </div>
 
+<!-- Trendy bars section -->
 <div class="homepage-container">
   <div class="homepage-group">
     <h1>Trendy bars</h1>
-    <div class="replace-with-cards">
-      <h1>< replace with cards ></h1>
+    <div class="glide-trendy-bars glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides" style="list-style: none;">
+          <li class="glide__slide">
+            <%= render "shared/cards/card-bar-larg" %>
+          </li>
+          <li class="glide__slide">
+            <%= render "shared/cards/card-bar-larg" %>
+          </li>
+          <li class="glide__slide">
+            <%= render "shared/cards/card-bar-larg" %>
+          </li>
+        </ul>
+      </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
     </div>
   </div>
+
+<!-- Events nearby section -->
   <div class="homepage-group">
     <div class="title-with-btn">
       <h2>Events nearby</h2>
       <%= link_to  "Show all", "", class: "btn btn-rounded" %>
     </div>
-    <div class="replace-with-cards">
-      <h1>< replace with cards ></h1>
+    <div class="glide-events-nearby glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides" style="list-style: none;">
+          <li class="glide__slide">
+            <%= render "shared/cards/card-event-small" %>
+          </li>
+          <li class="glide__slide">
+            <%= render "shared/cards/card-event-small" %>
+          </li>
+          <li class="glide__slide">
+            <%= render "shared/cards/card-event-small" %>
+          </li>
+        </ul>
+      </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
     </div>
   </div>
+
+<!-- Based on your profile section -->
   <div class="homepage-group">
     <div class="title-with-btn">
       <h2>Based on your profile</h2>
       <%= link_to  "Show all", "", class: "btn btn-rounded" %>
     </div>
-    <div class="replace-with-cards">
-      <h1>< replace with cards ></h1>
+    <div class="glide-based-profile glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides" style="list-style: none;">
+          <li class="glide__slide">
+            <%= render "shared/cards/card-bar-small" %>
+          </li>
+          <li class="glide__slide">
+            <%= render "shared/cards/card-bar-small" %>
+          </li>
+          <li class="glide__slide">
+            <%= render "shared/cards/card-bar-small" %>
+          </li>
+        </ul>
+      </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
     </div>
   </div>
+
+<!-- Map -->
   <div class="homepage-group">
     <div class="replace-with-map">
       <h1>< replace with map ></h1>
