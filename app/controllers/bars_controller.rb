@@ -1,5 +1,5 @@
 class BarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :showmap_full]
 
   def index
     @bars = Bar.all
@@ -7,6 +7,9 @@ class BarsController < ApplicationController
 
   def show
     @bar = Bar.find(params[:id])
+  end
+
+  def showmap_full
   end
 
   private

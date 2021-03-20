@@ -41,9 +41,14 @@
     </div>
   </div>
 
-  <div id="map"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
+
+    <div class="card-bar-show-map">
+      <a href=" <%= full_map_path %>">
+        <div id="map" class="small_size_map"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </a>
+    </div>
 
   <h5 class="section-title">Events</h5>
   <div class="event-bar-show">
