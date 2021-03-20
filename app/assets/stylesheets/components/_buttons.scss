@@ -1,0 +1,14 @@
+.btn-rounded {
+  color: white;
+  background-color: $purple;
+  padding: 6px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  &:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: white;
+  }
+}

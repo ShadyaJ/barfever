@@ -1,0 +1,67 @@
+//div btn sans btn event
+.btn-filter-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px 4px;
+}
+
+//btn
+.btn-filter-home {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background-color: white;
+  margin: 0;
+  padding: 10px 20px;
+  width: 85px;
+  a {
+    color: $purple;
+    &:hover {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  svg {
+    width: 47px;
+    font-size: 30px;
+  }
+  p {
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+    font-weight: bolder;
+  }
+}
+
+//btn event with calendar
+.btn-filter-events {
+  padding: 2px;
+  margin: 0 4px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  svg {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    width: 16px;
+    margin-top: 4px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+  }
+}
+  
+#filter-events {
+  display: flex;
+  justify-content: center;
+}
+
+// specifities
+#btn-filter-left {
+  border-radius: 10px 0 0 0;
+}
+
+#btn-filter-right {
+  border-radius: 0 10px 0 0;
+}
