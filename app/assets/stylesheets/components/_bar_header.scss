@@ -1,5 +1,9 @@
 .bar-header {
-  padding-top: 40px;
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 3000;
+  top: 0;
+  padding-top: 32px;
   width: 100%;
   height: 90px;
   background-color: white;
@@ -7,22 +11,27 @@
 }
 
 .arrow-back {
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 3001;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 38px;
+  top: 32px;
   left: 20px;
   height: 40px;
   width: 40px;
   text-align: center;
   i {
-    font-size: 30px;
+    font-size: 32px;
     margin: 0;
+    color: $purple;
   }
 }
 
   .title h2{
     margin: 0;
     text-align: center;
+    font-size: 32px;
+    color: $black;
   }

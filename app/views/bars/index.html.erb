@@ -1,8 +1,17 @@
-<div class="arrow-back">
-      <i class="fas fa-chevron-left"></i>
+<!-- Bar header -->
+  <div class="arrow-back">
+    <i class="fas fa-chevron-left"></i>
   </div>
-<div class="bar-header">
-  <div class="title">
-    <h2>Notifications</h2>
+  <div class="bar-header">
+    <div class="title">
+      <h2>Notifications</h2>
+    </div>
   </div>
+
+
+<!-- Cards container -->
+<div class="container">
+  <% @bars.each do |bar|  %>
+    <%= render 'card-bar-larg', bar: bar%>
+  <% end %>
 </div>
