@@ -10,6 +10,10 @@ class BarsController < ApplicationController
     # @bars = Bars.all
   end
 
+  def show
+    @bar = Bar.find(params[:id])
+  end
+
   private
 
   def vehicle_params
