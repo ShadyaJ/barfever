@@ -4,15 +4,15 @@
   </div>
   <div class="bar-header">
     <div class="title">
-      <h2>Bars</h2>
+      <h2>Events</h2>
     </div>
   </div>
 
 
 <!-- Cards container -->
 <div class="container">
-  <% @bars.each do |bar|  %>
-    <%= render 'card-bar-larg', bar: bar%>
+  <% @events.each do |event|  %>
+    <%= render 'card-bar-larg', event: event%>
   <% end %>
 </div>
 
