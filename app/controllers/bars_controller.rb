@@ -2,12 +2,7 @@ class BarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    # if params[:category].present?
-    #   @bars = Bars.where(category: params[:category])
-    # else
-    #   @bars = Bars.all
-    # end
-    # @bars = Bars.all
+    @bars = Bar.all
   end
 
   def show
