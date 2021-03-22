@@ -1,5 +1,5 @@
 class BarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :showmap_full]
+  skip_before_action :authenticate_user!, only: [:index, :show, :full_map]
 
   def index
     @bars = Bar.all
@@ -7,9 +7,18 @@ class BarsController < ApplicationController
 
   def show
     @bar = Bar.find(params[:id])
+    @markers = [{
+      lat: @bar.latitude,
+      lng: @bar.longitude
+    }]
   end
 
-  def showmap_full
+  def full_map
+    @bar = Bar.find(params[:id])
+    @markers = [{
+      lat: @bar.latitude,
+      lng: @bar.longitude
+    }]
   end
 
   private
