@@ -1,14 +1,7 @@
-// to delete after replacement with cards!!
-.replace-with-map {
-    background-color: lightgray;
-    width: 100%;
-    height: 150px;
-    margin-top: 30px;
-}
-
 // body without banner & btns filters
 .homepage-container {
   margin: 20px 15px;
+  margin-bottom: 95px;
 }
 
 .homepage-group {
@@ -33,9 +26,4 @@
     background-color: $pink;
     padding: 6px 20px;
   }
-}
-
-// specificities
-.no-shadow {
-  box-shadow: 0;
 }

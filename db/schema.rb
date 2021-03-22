@@ -38,6 +38,18 @@ ActiveRecord::Schema.define(version: 2021_03_18_194322) do
     t.index ["user_id"], name: "index_bars_on_user_id"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string "category"
+    t.text "description"
+    t.string "name"
+    t.decimal "price"
+    t.date "date"
+    t.bigint "bar_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bar_id"], name: "index_events_on_bar_id"
+  end
+
   create_table "musics", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
