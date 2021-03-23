@@ -2,7 +2,13 @@ class BarsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :showmap_full]
 
   def index
-    @bars = Bar.all
+    if params[:query].present?
+      @bars = Bar.where("address_city ILIKE?", "%#{params[:query]}%")
+    elsif params[:tag]
+      @bars = Bar.where(bars: { category: params[:tag] })
+    else
+      @bars = Bar.all
+    end
   end
 
   def show
