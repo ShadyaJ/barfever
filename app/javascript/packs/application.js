@@ -25,16 +25,22 @@ require("channels")
 // External imports
 import "bootstrap";
 
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initStarRating } from '../plugins/init_star_rating';
+// import { initStarRating } from '../plugins/init_star_rating';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initGlide } from "../plugins/init_glide";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 
-  initStarRating();
+  // carousels
+  initGlide();
+
+  // stars rating
+  //initStarRating();
+  
+  //mapbox
   initMapbox();
 });
