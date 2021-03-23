@@ -69,16 +69,17 @@
 
 .card-bar-event{
   display: flex;
-  background-color: #7C35C3;
+  background-color: $pink;
   border-radius: 5px;
   padding: 2px;
   width: 121px;
   justify-content: center;
   align-items: center;
 
-  h5 {
+  p {
     font-size: 16px;
     margin: 0;
+    color: white;
   }
 }
 
@@ -203,15 +204,16 @@
 
 .card-event-event{
   display: flex;
-  background-color: #7C35C3;
+  background-color: $pink;
   border-radius: 5px;
   padding: 2px;
   justify-content: center;
   align-items: center;
 
-  h5 {
+  p {
     font-size: 16px;
     margin: 0;
+    color: white;
   }
 }
 

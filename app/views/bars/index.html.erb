@@ -10,9 +10,11 @@
 
 
 <!-- Cards container -->
-<div class="container">
+<div class="index-container">
   <% @bars.each do |bar|  %>
-    <%= render 'card-bar-larg', bar: bar%>
+    <%= link_to bar_path(bar) do %>
+      <%= render 'card-bar-larg', bar: bar%>
+    <% end %>
   <% end %>
 </div>
 
