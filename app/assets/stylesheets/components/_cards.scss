@@ -22,7 +22,15 @@
 .card-bar-position {
   display: flex;
   margin: 0;
-  padding-top: 16px;
+  bottom: 5px;
+}
+
+.card-bar-small-review-position {
+  display: flex;
+  position: fixed;
+  width: 148px;
+  justify-content: space-between;
+  bottom: 5px;
 }
 
 /*-------------Cards Bars small-----------------*/

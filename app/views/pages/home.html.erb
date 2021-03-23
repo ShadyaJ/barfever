@@ -53,15 +53,13 @@
     <div class="glide-trendy-bars glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
-          <li class="glide__slide">
-            <%= render "shared/cards/card-bar-larg" %>
-          </li>
-          <li class="glide__slide">
-            <%= render "shared/cards/card-bar-larg" %>
-          </li>
-          <li class="glide__slide">
-            <%= render "shared/cards/card-bar-larg" %>
-          </li>
+          <% @bars.each do |bar|  %>
+            <%= link_to bar_path(bar) do %>
+              <li class="glide__slide">
+                <%= render "pages/cards/card-bar-larg", bar: bar%>
+              </li>
+            <% end %>
+          <% end %>
         </ul>
       </div>
         <div class="glide__arrows" data-glide-el="controls">
@@ -84,15 +82,13 @@
     <div class="glide-events-nearby glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
-          <li class="glide__slide">
-            <%= render "shared/cards/card-event-small" %>
-          </li>
-          <li class="glide__slide">
-            <%= render "shared/cards/card-event-small" %>
-          </li>
-          <li class="glide__slide">
-            <%= render "shared/cards/card-event-small" %>
-          </li>
+          <% @events.each do |event|  %>
+            <%= link_to event_path(event) do %>
+              <li class="glide__slide">
+                <%= render "pages/cards/card-event-small", event: event %>
+              </li>
+            <% end %>
+          <% end %>
         </ul>
       </div>
         <div class="glide__arrows" data-glide-el="controls">
@@ -109,21 +105,19 @@
 <!-- Based on your profile section -->
   <div class="homepage-group">
     <div class="title-with-btn">
-      <h2>Based on your profile</h2>
+      <h2>Bars nearby</h2>
       <%= link_to  "Show all", "", class: "btn btn-rounded" %>
     </div>
     <div class="glide-based-profile glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
-          <li class="glide__slide">
-            <%= render "shared/cards/card-bar-small" %>
-          </li>
-          <li class="glide__slide">
-            <%= render "shared/cards/card-bar-small" %>
-          </li>
-          <li class="glide__slide">
-            <%= render "shared/cards/card-bar-small" %>
-          </li>
+          <% @bars.each do |bar|  %>
+            <%= link_to bar_path(bar) do %>
+              <li class="glide__slide">
+                <%= render "pages/cards/card-bar-small", bar: bar%>
+              </li>
+            <% end %>
+          <% end %>
         </ul>
       </div>
         <div class="glide__arrows" data-glide-el="controls">

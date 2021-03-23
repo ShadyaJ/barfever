@@ -1,0 +1,37 @@
+<div class="card-bar-small">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+
+  <div class="card-bar-info">
+    <% if bar.incoming_event %>
+    <div class="card-bar-event">
+      <p><%= bar.incoming_event.category %></p>
+    </div>
+    <% end %>
+
+    <div class="card-bar-title">
+      <h5><%= bar.name %></h5>
+    </div>
+
+<div class="card-bar-small-review-position">
+      <div class="card-bar-review">
+        <div class="stars">
+          <p>*****</p>
+        </div>
+
+        <div class="review">
+          <p>10 avis</p>
+        </div>
+      </div>
+
+      <div class="card-bar-larg-position">
+        <div class="position-text">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+
+        <div class="position-meter">
+          <p>200m</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
