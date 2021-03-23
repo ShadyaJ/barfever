@@ -1,7 +1,9 @@
 <!-- Bar header -->
+<%= link_to root_path do %>
   <div class="arrow-back">
     <i class="fas fa-chevron-left"></i>
   </div>
+<% end %>
   <div class="bar-header">
     <div class="title">
       <h2>Events</h2>
@@ -12,8 +14,10 @@
 <!-- Cards container -->
 <div class="index-container">
   <% @events.each do |event|  %>
-    <%= render 'card-bar-larg', event: event%>
-  <% end %>
+    <%= link_to event_path(event) do %>
+      <%= render 'card-event-larg', event: event%>
+    <% end %>
+    <% end %>
 </div>
 
 <div class="btn-filter-map">
