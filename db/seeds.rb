@@ -44,4 +44,7 @@ csv_bars.each do |row|
 end
 
 
+event_1 = Event.create!(category: "Promotion", description: "Super promotion in all stuff to drink, buy one get one free",
+  name: "buy 1 get 1 free", price: "50%", date: "24.03.2021", bar_id: "2")
+
 
