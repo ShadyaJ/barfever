@@ -2,9 +2,11 @@
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
 
   <div class="card-bar-info">
+    <% if bar.incoming_event %>
     <div class="card-bar-event">
-      <h5>Event</h5>
+      <p><%= bar.incoming_event.category %></p>
     </div>
+    <% end %>
 
     <div class="card-bar-title">
       <h5><%= bar.name %></h5>

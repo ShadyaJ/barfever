@@ -3,11 +3,11 @@
 
   <div class="card-event-larg-info">
     <div class="card-event-larg-event">
-      <p>Event</p>
+      <h5><%= event.category %></h5>
     </div>
 
     <div class="card-event-title">
-      <h5>Bar name</h5>
+      <h5><%= event.bar.name %></h5>
     </div>
 
     <div class="card-event-larg-position-price">
@@ -21,9 +21,8 @@
         </div>
       </div>
       <div class="price">
-        <p>$$$$</p>
+        <p><%= event.price %></p>
       </div>
     </div>
   </div>
 </div>
-

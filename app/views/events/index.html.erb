@@ -4,21 +4,20 @@
     <i class="fas fa-chevron-left"></i>
   </div>
 <% end %>
-
   <div class="bar-header">
     <div class="title">
-      <h2>Bars</h2>
+      <h2>Events</h2>
     </div>
   </div>
 
 
 <!-- Cards container -->
 <div class="index-container">
-  <% @bars.each do |bar|  %>
-    <%= link_to bar_path(bar) do %>
-      <%= render 'card-bar-larg', bar: bar%>
+  <% @events.each do |event|  %>
+    <%= link_to event_path(event) do %>
+      <%= render 'card-event-larg', event: event%>
     <% end %>
-  <% end %>
+    <% end %>
 </div>
 
 <div class="btn-filter-map">
