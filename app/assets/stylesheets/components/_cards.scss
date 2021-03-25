@@ -22,7 +22,15 @@
 .card-bar-position {
   display: flex;
   margin: 0;
-  padding-top: 16px;
+  bottom: 5px;
+}
+
+.card-bar-small-review-position {
+  display: flex;
+  position: fixed;
+  width: 148px;
+  justify-content: space-between;
+  bottom: 5px;
 }
 
 /*-------------Cards Bars small-----------------*/
@@ -182,7 +190,7 @@
 
 .card-event-larg-event{
   display: flex;
-  background-color: #7C35C3;
+  background-color: $pink;
   border-radius: 5px;
   padding: 6px;
   justify-content: center;
