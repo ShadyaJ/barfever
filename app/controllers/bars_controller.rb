@@ -6,6 +6,8 @@ class BarsController < ApplicationController
       @bars = Bar.where("address_city ILIKE?", "%#{params[:query]}%")
     elsif params[:tag]
       @bars = Bar.where(bars: { category: params[:tag] })
+    elsif params[:tag_2]
+      @bars = Bar.where(bars: { terrasse: params[:tag_2] })
     else
       @bars = Bar.all
     end
