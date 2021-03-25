@@ -1,5 +1,3 @@
-require 'CSV'
-
 puts "Destroy users"
 User.destroy_all
 
@@ -29,9 +27,8 @@ csv_text_bars = File.read(Rails.root.join('lib', 'seeds', 'Bars Lausanne_bars.cs
 csv_bars = CSV.parse(csv_text_bars, :headers => true, :encoding => 'ISO-8859-1')
 csv_bars.each do |row|
   t = Bar.new
-  t.name = row['name']
+  t.name = row['name'].strip
   t.category = row['category']
-  puts "#{t.category}"
   t.description = row['description']
   t.price = row['price']
   t.address_street = row['street']
@@ -43,8 +40,19 @@ csv_bars.each do |row|
   puts "Create #{t.name} - #{t.category}"
 end
 
+puts "Create events"
 
-event_1 = Event.create!(category: "Promotion", description: "Super promotion in all stuff to drink, buy one get one free",
-  name: "buy 1 get 1 free", price: "50%", date: "24.03.2021", bar_id: "2")
-
-
+csv_text_events = File.read(Rails.root.join('lib', 'seeds', 'Bars Lausanne_events.csv'))
+csv_events = CSV.parse(csv_text_events, :headers => true, :encoding => 'ISO-8859-1')
+csv_events.each do |row|
+  t = Event.new
+  t.name = row['Name']
+  t.category = row['Category']
+  t.description = row['Description']
+  t.price = row['Price'].to_i
+  t.date = row['Date']
+  t.bar = Bar.find_by(name: row['Bar'])
+  # need to add photos later when we have cloudinary
+  t.save!
+  puts "Create #{t.name} - #{t.category}"
+end
