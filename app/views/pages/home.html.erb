@@ -2,7 +2,13 @@
 <div class="banner-home">
   <div class="container" id="container-banner-home">
     <div class="input-group input-group-sm mb-3" id="input-banner-home-group">
-      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search by city" id="input-banner-home">
+      <%= form_tag bars_path, method: :get, class:"input-banner-home" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search by city"
+        %>
+      <% end %>
     </div>
     <%= link_to "What's nearby?", "" , class: "btn btn-rounded" %>
   </div>
@@ -12,25 +18,25 @@
 <div class="container-btn-filters">
   <div class="btn-filter-list">
     <div class="btn-filter-home" id="btn-filter-left">
-      <%= link_to "#" do %>
+      <%= link_to bars_path(tag: "Bar") do %>
         <%= svg('icon-beer') %>
         <p>Bar/Pub</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
-      <%= link_to "#" do %>
+      <%= link_to bars_path(tag: "Nightclub") do %>
         <%= svg('icon-nightclub') %>
         <p>Nightclub</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
-      <%= link_to "#" do %>
+      <%= link_to bars_path(tag: "Lounge") do %>
         <%= svg('icon-lounge') %>
         <p>Lounge</p>
       <% end %>
     </div>
     <div class="btn-filter-home" id="btn-filter-right">
-      <%= link_to "#" do %>
+      <%= link_to bars_path(tag_2: true) do %>
         <%= svg('icon-terrasse') %>
         <p>Terrasse</p>
       <% end %>
@@ -38,7 +44,7 @@
   </div>
   <div class="btn-filter-list">
     <div class="btn-filter-home btn-filter-events">
-      <%= link_to "#",id:"filter-events" do %>
+      <%= link_to events_path,id:"filter-events" do %>
         <p>Events</p>
         <%= svg('icon-calendar') %>
       <% end %>
