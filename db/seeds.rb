@@ -34,6 +34,8 @@ csv_bars.each do |row|
   t.address_street = row['street']
   t.address_zipcode = row['zipcode']
   t.address_city = row['city']
+  t.photo_url_1 = row['Photo 1']
+  t.photo_url_2 = row['Photo 2']
   # need to add photos later when we have cloudinary
   t.user = User.where(status: "I own the party!").sample
   t.save!
