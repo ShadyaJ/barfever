@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_03_23_211214) do
 
   # These are extensions that must be enabled in order to support this database
@@ -36,6 +37,8 @@ ActiveRecord::Schema.define(version: 2021_03_23_211214) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "terrasse"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_bars_on_user_id"
   end
 

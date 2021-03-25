@@ -43,11 +43,13 @@
 
 
     <div class="card-bar-show-map">
-      <a href=" <%= full_map_path %>">
-        <div id="map" class="small_size_map"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
-      </a>
+      <div id="map" class="small_size_map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <%= link_to full_map_bar_path(@bar), class: "show-map-expand" do %>
+        <i class="fas fa-expand-alt"></i>
+      <% end %>
     </div>
 
   <h5 class="section-title">Events</h5>

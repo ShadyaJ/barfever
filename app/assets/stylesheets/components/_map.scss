@@ -8,3 +8,19 @@
   width: 100vw!important;
   height: 100vh!important;
 }
+
+.show-map-expand {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.full-map-show {
+  position: relative;
+}
+
+.show-map-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
