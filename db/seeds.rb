@@ -56,6 +56,7 @@ csv_events.each do |row|
   t.description = row['Description']
   t.price = row['Price'].to_i
   t.date = row['Date']
+  t.photo_url_1 = row['photo']
   t.bar = Bar.find_by(name: row['Bar'])
   # need to add photos later when we have cloudinary
   t.save!
