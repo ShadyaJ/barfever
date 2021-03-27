@@ -56,7 +56,7 @@
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
           <% @events.each do |event|  %>
-            <%= link_to event_path(event) do %>
+            <%= link_to event_path(event, redirection: "bar-show") do %>
               <li class="glide__slide">
                 <%= render "pages/cards/card-event-small", event: event %>
               </li>

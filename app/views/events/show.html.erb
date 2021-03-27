@@ -1,7 +1,15 @@
-<%= link_to root_path do %>
-  <div class="arrow-back-show">
-    <i class="fas fa-chevron-left"></i>
-  </div>
+<% if @redirection == "bar-show" %>
+  <%= link_to bar_path(@event.bar) do %>
+    <div class="arrow-back-show">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+  <% end %>
+<% else %>
+  <%= link_to events_path do %>
+    <div class="arrow-back-show">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+  <% end %>
 <% end %>
 
 <div>

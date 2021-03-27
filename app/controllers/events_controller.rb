@@ -4,6 +4,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @redirection = params[:redirection]
   end
 
   def index
