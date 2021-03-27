@@ -4,6 +4,11 @@ User.destroy_all
 puts "Destroy bars"
 Bar.destroy_all
 
+puts "Destroy events"
+Event.destroy_all
+
+
+
 puts "Create users"
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'Bars_Lausanne_users.csv'))
