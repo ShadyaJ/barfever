@@ -14,7 +14,7 @@
 }
 
 
-// Index button map and filters
+// ---------------Index button map and filters-----------------
 
 .btn-filter-map {
   position: fixed;
@@ -61,3 +61,59 @@
   justify-content: center;
 
 }
+// ---------------Index button map and filters-----------------
+// ---------------------- button bars show -------------------
+
+.btn-pink {
+  background-color: $purple;
+  border: 1px solid $purple;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-outline-pink {
+  border: 1px solid $purple;
+  border-radius: 5px;
+  color: $purple;
+}
+
+// ---------------------- button bars show -------------------
+// ---------------------- button event show -------------------
+
+.btn-event-guest {
+  background-color: $purple;
+  border: 1px solid $purple;
+  border-radius: 5px;
+  color: white;
+  width: 45%;
+}
+
+.btn-event-book {
+  border: 1px solid $purple;
+  border-radius: 5px;
+  color: $purple;
+  width: 45%;
+}
+// ---------------------- button event show -------------------
+// ---------------------- button show -------------------
+
+.arrow-back-show {
+  position: fixed;
+  overflow-y: scroll;
+  z-index: 3001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 32px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  i {
+    font-size: 32px;
+    margin: 0;
+    color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+}
+// ---------------------- button show -------------------

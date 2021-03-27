@@ -1,3 +1,9 @@
+<%= link_to root_path do %>
+  <div class="arrow-back-show">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+<% end %>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -42,21 +48,35 @@
   </div>
 
 
-    <div class="card-bar-show-map">
-      <div id="map" class="small_size_map"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-      <%= link_to full_map_bar_path(@bar), class: "show-map-expand" do %>
-        <i class="fas fa-expand-alt"></i>
-      <% end %>
-    </div>
+
 
   <h5 class="section-title">Events</h5>
-  <div class="event-bar-show">
-    <%= render "shared/cards/card-event-small" %>
-    <%= render "shared/cards/card-event-small" %>
+  <div class="homepage-group">
+    <div class="glide-events-nearby glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides" style="list-style: none;">
+          <% @events.each do |event|  %>
+            <%= link_to event_path(event) do %>
+              <li class="glide__slide">
+                <%= render "pages/cards/card-event-small", event: event %>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+      <% unless @events.empty? %>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      <% end %>
+    </div>
   </div>
+
 
   <h5 class="section-title">Photos of the night</h5>
   <div class="photos-night">
