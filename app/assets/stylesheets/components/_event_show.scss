@@ -6,6 +6,21 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.card-event-bar-name {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 12px 6px;
+  background-color: $purple;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+  }
+}
+
 .card-event-show-category {
   color:#D83F87;
 }
