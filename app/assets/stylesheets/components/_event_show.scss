@@ -1,6 +1,6 @@
 .card-event-show {
-  margin-top: 8px;
-  padding: 12px 6px;
+  margin-top: 32px;
+  padding: 32px 8px;
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -9,16 +9,7 @@
 .card-event-bar-name {
   display: flex;
   justify-content: center;
-  margin-top: 8px;
-  padding: 12px 6px;
-  background-color: $purple;
-  border-radius: 6px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  p {
-    font-size: 1.5rem;
-    color: white;
-    margin: 0;
-  }
+  margin-bottom: 32px;
 }
 
 .card-event-show-category {
@@ -26,7 +17,7 @@
 }
 
 .card-event-show-buttons {
-  margin-top: 18px;
+  margin-top: 32px;
   display: flex;
   justify-content: space-around;
 }
@@ -39,3 +30,32 @@
   position: relative;
 }
 
+.img-show {
+  height: 335px;
+  img {
+    height: 335px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.event-category{
+  position: absolute;
+  right: 8px;
+  top: 302px;
+  display: flex;
+  background-color: $pink;
+  border-radius: 5px;
+  padding: 4px;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+
+  p {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+  }
+}

@@ -12,19 +12,20 @@
   <% end %>
 <% end %>
 
-<div>
+<div class="img-show">
   <img src="<%= @event.photo_url_1 %>">
 </div>
 
+<div class="event-category">
+  <p><%= @event.category %></p>
+</div>
 <div class="show-container">
-
-  <div class="card-event-bar-name">
-    <p><%= @event.bar.name %></p>
-  </div>
   <div class="card-event-show">
     <div class="card-event-show-body">
-        <h6 class="card-event-show-category"><%= @event.category %></h6>
-        <h4><%= @event.name %></h4>
+        <div class="card-event-bar-name">
+          <h4><%= @event.name %></h4>
+        </div>
+        <h5><%= @event.bar.name %></h5>
         <h6 class="card-event-price-grey"><%= @event.date %></h6>
         <p><%= @event.description %></p>
 

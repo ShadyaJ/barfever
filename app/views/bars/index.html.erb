@@ -15,7 +15,7 @@
 <!-- Cards container -->
 <div class="index-container">
   <% @bars.each do |bar|  %>
-    <%= link_to bar_path(bar) do %>
+    <%= link_to bar_path(bar, redirection: "bar-index") do %>
       <%= render 'card-bar-larg', bar: bar%>
     <% end %>
   <% end %>

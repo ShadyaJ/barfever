@@ -20,6 +20,7 @@ class BarsController < ApplicationController
       lng: @bar.longitude
     }]
     @events = @bar.events
+    @redirection = params[:redirection]
   end
 
   def full_map
