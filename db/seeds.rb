@@ -1,6 +1,12 @@
 puts "Destroy users"
 User.destroy_all
 
+puts "Destroy bar_musics"
+BarMusic.destroy_all
+
+puts "Destroy musics"
+Music.destroy_all
+
 puts "Destroy bars"
 Bar.destroy_all
 
@@ -66,4 +72,28 @@ csv_events.each do |row|
   # need to add photos later when we have cloudinary
   t.save!
   puts "Create #{t.name} - #{t.category}"
+end
+
+puts "Create musics"
+
+csv_text_musics = File.read(Rails.root.join('lib', 'seeds', 'Bars_Lausanne_musics.csv'))
+csv_musics = CSV.parse(csv_text_musics, :headers => true, :encoding => 'ISO-8859-1')
+csv_musics.each do |row|
+  t = Music.new
+  t.name = row['music_style']
+  # need to add photos later when we have cloudinary
+  t.save!
+end
+
+puts "Create bar_musics"
+
+csv_text_bar_musics = File.read(Rails.root.join('lib', 'seeds', 'Bars_Lausanne_bar_musics.csv'))
+csv_bar_musics = CSV.parse(csv_text_bar_musics, :headers => true, :encoding => 'ISO-8859-1')
+csv_bar_musics.each do |row|
+  t = BarMusic.new
+  t.music = Music.find_by(name: row['music_style'])
+  t.bar = Bar.find_by(name: row['bar'])
+  # need to add photos later when we have cloudinary
+  puts "Create #{row['music_style']} - #{row['bar']}"
+  t.save!
 end
