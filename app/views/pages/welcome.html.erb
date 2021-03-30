@@ -1,15 +1,14 @@
-<section class="welcome-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <h2 class="heading-section text-center">Welcome to BarFever</h2>
-      <div class="col-md-6 col-lg-4">
-        <p class="text-center">We know the perfect place</p>
-        <div class="welcome-img d-flex align-items-center justify-content-center main-img"></div>
-        <div class="col-md-6 text-nowrap text-dark">
-          <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-outline border border-dark btn-default w-100 hm-sign' %>
-          <%= link_to 'Register', new_user_registration_path, class: 'btn btn-dark w-100 hm-signup' %>
-        </div>
-      </div>
-    </div>
+
+
+<div class="welcome-container">
+  <div class="welcome-btn">
+    <%= link_to 'Skip', root_path %>
   </div>
-</section>
+  <h2 class="welcome-title">Welcome to BarFever</h2>
+    <p class="welcome-subtitle">We know the perfect place</p>
+    <div class="welcome-img d-flex align-items-center justify-content-center main-img"></div>
+    <div class="col-md-6 text-nowrap text-dark">
+      <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-outline border border-dark btn-default w-100 hm-sign' %>
+      <%= link_to 'Register', new_user_registration_path, class: 'btn btn-dark w-100 hm-signup' %>
+    </div>
+</div>

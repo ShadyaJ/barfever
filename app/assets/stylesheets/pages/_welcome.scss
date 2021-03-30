@@ -1,3 +1,24 @@
+.welcome-container {
+padding: 20px 8px;
+}
+
+.welcome-btn a {
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  color: grey;
+  padding: 10px;
+  :hover {
+    color: $purple;
+  }
+}
+
+.welcome-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
 .main-img{
   background: url('bar.jpg');
 }
