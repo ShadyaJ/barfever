@@ -1,14 +1,14 @@
 
 
 <div class="welcome-container">
-  <div class="welcome-btn">
+  <div class="welcome-skip-btn">
     <%= link_to 'Skip', root_path %>
   </div>
   <h2 class="welcome-title">Welcome to BarFever</h2>
-    <p class="welcome-subtitle">We know the perfect place</p>
+    <p class="welcome-subtitle">We know the perfect place!</p>
     <div class="welcome-img d-flex align-items-center justify-content-center main-img"></div>
-    <div class="col-md-6 text-nowrap text-dark">
-      <%= link_to 'Sign In', new_user_session_path, class: 'btn btn-outline border border-dark btn-default w-100 hm-sign' %>
-      <%= link_to 'Register', new_user_registration_path, class: 'btn btn-dark w-100 hm-signup' %>
+    <div class="welcome-buttons">
+      <%= link_to 'Sign In', new_user_session_path, class: 'welcome-btn-sign-in' %>
+      <%= link_to 'Register', new_user_registration_path, class: 'welcome-btn-sign-up' %>
     </div>
 </div>

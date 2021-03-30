@@ -1,6 +1,55 @@
-.devise-wrapper {
-  width: 100%;
-  max-width: 420px;
-  padding: 15px;
-  margin: 0 auto;
+.devise-container {
+  padding: 10px 8px;
 }
+// ----------------login-------------------------
+.forme-login {
+  background-color: white;
+  padding: 30px 20px;
+  margin-top: 50px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .forme-login-btn {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    background-color: $purple;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+}
+// ----------------login-------------------------
+// ----------------sign up-------------------------
+.forme-sign-up {
+  background-color: white;
+  padding: 30px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .forme-sign-up-btn {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    background-color: $purple;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+}
+

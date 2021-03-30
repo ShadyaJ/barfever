@@ -14,7 +14,9 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/navbar' %>
+    <% unless current_page?(welcome_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
+      <%= render 'shared/navbar' %>
+    <% end %>
 
     <!-- the script below is used for the carousel because the npm version is bugged, do not remove! -->
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
