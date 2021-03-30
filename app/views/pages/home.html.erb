@@ -60,7 +60,7 @@
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
           <% @bars.each do |bar|  %>
-            <%= link_to bar_path(bar) do %>
+            <%= link_to bar_path(bar, redirection: "home") do %>
               <li class="glide__slide">
                 <%= render "pages/cards/card-bar-larg", bar: bar%>
               </li>
@@ -89,7 +89,7 @@
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
           <% @events.each do |event|  %>
-            <%= link_to event_path(event) do %>
+            <%= link_to event_path(event, redirection: "home") do %>
               <li class="glide__slide">
                 <%= render "pages/cards/card-event-small", event: event %>
               </li>
@@ -118,7 +118,7 @@
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
           <% @bars.each do |bar|  %>
-            <%= link_to bar_path(bar) do %>
+            <%= link_to bar_path(bar, redirection: "home") do %>
               <li class="glide__slide">
                 <%= render "pages/cards/card-bar-small", bar: bar%>
               </li>

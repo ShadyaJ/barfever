@@ -14,7 +14,7 @@
 <!-- Cards container -->
 <div class="index-container">
   <% @events.each do |event|  %>
-    <%= link_to event_path(event) do %>
+    <%= link_to event_path(event, redirection: "event-index") do %>
       <%= render 'card-event-larg', event: event%>
     <% end %>
     <% end %>

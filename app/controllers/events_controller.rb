@@ -3,6 +3,8 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show]
 
   def show
+    @event = Event.find(params[:id])
+    @redirection = params[:redirection]
   end
 
   def index
@@ -13,5 +15,11 @@ class EventsController < ApplicationController
 
   def find_event
     @event = Event.find_by(id: params[:id])
+  end
+
+  def event_params
+    params.require(:event).permit(
+      :name, :category, :description, :price
+    )
   end
 end

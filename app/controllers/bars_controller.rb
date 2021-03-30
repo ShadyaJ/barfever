@@ -19,6 +19,8 @@ class BarsController < ApplicationController
       lat: @bar.latitude,
       lng: @bar.longitude
     }]
+    @events = @bar.events
+    @redirection = params[:redirection]
   end
 
   def full_map
@@ -31,8 +33,8 @@ class BarsController < ApplicationController
 
   private
 
-  def vehicle_params
-    params.require(:vehicle).permit(
+  def bar_params
+    params.require(:bar).permit(
       :name, :category, :description, :price,
       :address_street, :address_zipcode, :address_city, :user_id
     )
