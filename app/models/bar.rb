@@ -15,4 +15,8 @@ class Bar < ApplicationRecord
   def incoming_event
     self.events.where('date > ?', Time.now).order(date: :asc).first
   end
+
+  def distance_from
+    Geocoder::Calculations.distance_between(self.latitude, self.longitude, 46.53214628568322, 6.590972302445458)
+  end
 end
