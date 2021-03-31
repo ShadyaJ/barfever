@@ -51,7 +51,9 @@
     <div class="card-bar-show-buttons">
       <%= link_to "Guest List", "#", class: "btn btn-pink" %>
       <%= link_to "Book Table", "#", class: "btn btn-outline-pink" %>
-      <%= link_to "Add Review", "#", class: "btn btn-outline-pink" %>
+      <% if @bar.reviews.where(user: current_user).empty?  %>
+        <%= link_to "Add Review", new_bar_review_path(@bar), class: "btn btn-outline-pink" %>
+      <% end %>
     </div>
   </div>
 

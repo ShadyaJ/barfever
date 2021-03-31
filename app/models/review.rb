@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
-  validates :content, :rating, presence: true
+  validates :rating, presence: true
+  validates :user, uniqueness: { scope: :bar, message: "You already rated the bar!" }
   belongs_to :user
-  belongs_to :bar, optional: true
+  belongs_to :bar
 end

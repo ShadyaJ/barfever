@@ -35,14 +35,16 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 
+  // stars rating
+  initStarRating();
+
   //mapbox
   initMapbox();
 
   // carousels
   initGlide();
 
-  // stars rating
-  initStarRating();
+
 
 
 });
