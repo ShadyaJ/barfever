@@ -17,6 +17,6 @@ class Bar < ApplicationRecord
   end
 
   def distance_from
-    Geocoder::Calculations.distance_between(self.latitude, self.longitude, 46.53214628568322, 6.590972302445458)
+    "#{Geocoder::Calculations.distance_between([self.latitude, self.longitude], [46.53214628568322, 6.590972302445458]).round(1)} km"
   end
 end
