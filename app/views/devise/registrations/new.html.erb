@@ -1,42 +1,55 @@
-<div class='devise-wrapper'>
-  <h2>Sign up</h2>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+<div class='devise-container'>
 
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :first_name,
-                  required: true,
-                  input_html: { autocomplete: "first_name" } %>
-      <%= f.input :last_name,
-                  required: true,
-                  input_html: { autocomplete: "last_name" } %>
-      <%= f.input :nickname,
-                  required: true,
-                  input_html: { autocomplete: "nickname" } %>
-      <%= f.input :phone_number,
-                  required: true,
-                  input_html: { autocomplete: "phone_number" } %>
-      <%= f.label :status %>
-      <%= f.select :status,
-                  options_for_select(User::STATUSES), {},
-                  class: 'form-control',
-                  required: true %>
+  <div class="forme-sign-up">
+    <div class="welcome-skip-btn">
+      <%= link_to 'Skip', root_path %>
     </div>
+    <h2>Sign up</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-    <div class="form-actions mt-4">
-      <%= f.button :submit, "Sign up", class: 'btn btn-dark' %>
-    </div>
-    <%= render "devise/shared/links" %>
-  <% end %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    palceholder: 'spong.bob@gmail.com',
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    required: true,
+                    palceholder: '·········',
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+                    required: true,
+                    palceholder: "·········",
+                    input_html: { autocomplete: "new-password" } %>
+        <%= f.input :first_name,
+                    required: true,
+                    palceholder: "bob",
+                    input_html: { autocomplete: "first_name" } %>
+        <%= f.input :last_name,
+                    required: true,
+                    palceholder: "spong",
+                    input_html: { autocomplete: "last_name" } %>
+        <%= f.input :nickname,
+                    required: true,
+                    palceholder: "spongyboby",
+                    input_html: { autocomplete: "nickname" } %>
+        <%= f.input :phone_number,
+                    required: true,
+                    palceholder: "+41 79 ... .. ..",
+                    input_html: { autocomplete: "phone_number" } %>
+        <%= f.label :status %>
+        <%= f.select :status,
+                    options_for_select(User::STATUSES), {},
+                    class: 'form-control',
+                    required: true %>
+      </div>
+
+      <div class="form-actions mt-4">
+        <%= f.button :submit, "Sign up", class: 'forme-btn' %>
+      </div>
+      <%= render "devise/shared/links" %>
+    <% end %>
+  </div>
 </div>

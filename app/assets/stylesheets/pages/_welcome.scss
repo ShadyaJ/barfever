@@ -1,3 +1,61 @@
+.welcome-container {
+  padding: 20px 8px;
+  margin: 20px 8px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+}
+
+.welcome-skip-btn a {
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  color: grey;
+  padding: 10px;
+  &:hover {
+    color: $purple;
+  }
+}
+
+.welcome-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30%;
+    .welcome-btn-sign-in {
+      width: 40%;
+      padding: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: $purple;
+      font-size: 16px;
+      border: solid 1px $purple;
+      border-radius: 6px;
+  }
+  .welcome-btn-sign-up {
+    width: 40%;
+    padding: 8px;
+    text-align: center;
+    background-color: $purple;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+}
+
+
+.welcome-title {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-subtitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 .main-img{
   background: url('bar.jpg');
 }
@@ -13,8 +71,3 @@
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-  .hm-sign, .hm-signup {
-    width: 50% !important;
-  }
-}

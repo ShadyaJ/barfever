@@ -1,20 +1,25 @@
-<div class='devise-wrapper'>
-  <h2>Forgot your password?</h2>
-
-  <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
+<div class='devise-container'>
+  <div class="forme-sign-up">
+    <div class="welcome-skip-btn">
+      <%= link_to 'Skip', root_path %>
     </div>
+    <h2>Forgot your password?</h2>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Send me reset password instructions", class: 'btn btn-dark' %>
-    </div>
-  <% end %>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
 
-  <%= render "devise/shared/links" %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Send me reset password instructions", class: 'forme-btn' %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
 </div>
