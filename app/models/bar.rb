@@ -30,7 +30,7 @@ class Bar < ApplicationRecord
       average_user_array.each do |number|
         sum += number
       end
-      (sum/(self.reviews.count)).round(1)
+      (sum/(self.reviews.count)).round(0)
     else
       "no ratings"
     end

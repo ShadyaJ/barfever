@@ -1,6 +1,9 @@
 puts "Destroy users"
 User.destroy_all
 
+puts "Destroy reviews"
+Review.destroy_all
+
 puts "Destroy bar_musics"
 BarMusic.destroy_all
 
@@ -97,3 +100,37 @@ csv_bar_musics.each do |row|
   puts "Create #{row['music_style']} - #{row['bar']}"
   t.save!
 end
+
+
+puts "Create reviews"
+
+csv_text_reviews = File.read(Rails.root.join('lib', 'seeds', 'Bars_Lausanne_reviews.csv'))
+csv_reviews = CSV.parse(csv_text_reviews, :headers => true, :encoding => 'ISO-8859-1')
+csv_reviews.each do |row|
+  t = Review.new
+  t.bar = Bar.find_by(name: row['name'])
+  puts t.bar.name
+  t.review_experience = row['review_experience']
+  t.review_drink = row['review_drink']
+  t.review_music = row['review_music']
+  t.user = User.first
+  # need to add photos later when we have cloudinary
+  puts "Create #{row['name']} - #{row['review_experience']}, #{row['review_drink']}, #{row['review_music']}"
+  t.save!
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
