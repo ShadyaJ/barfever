@@ -138,6 +138,12 @@
   </div>
 
 <!-- Map -->
+  <div class="card-bar-show-map">
+    <div id="map" class="small_size_map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 
     </div>
   </div>
