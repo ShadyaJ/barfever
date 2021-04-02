@@ -35,4 +35,8 @@ class Bar < ApplicationRecord
       "no ratings"
     end
   end
+
+  def blank_stars
+    5 - average_rating.to_i
+  end
 end

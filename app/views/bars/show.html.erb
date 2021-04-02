@@ -40,12 +40,13 @@
         <h6 class="card-bar-price-grey"><%= @bar.price %></h6>
         <p><%= @bar.description %></p>
         <div class="card-bar-show-reviews">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <span><%= @bar.average_rating %> </span>
+          <% @bar.average_rating.to_i.times do %>
+            <span class="fas fa-star" style="color: #D83F87;"></span>
+          <% end %>
+          <% @bar.blank_stars.to_i.times do %>
+            <span class="fas fa-star" style="color: grey;"></span>
+          <% end %>
+          <span><%= "#{@bar.average_rating} / 5" %> </span>
         </div>
 
     </div>

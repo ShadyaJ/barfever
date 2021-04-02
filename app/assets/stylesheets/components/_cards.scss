@@ -37,7 +37,7 @@
 /*-------------Cards Bars larg-----------------*/
 .card-bar-larg {
   margin-top: 16px;
-  height: 188px;
+  height: 200px;
   width: 348px;
   overflow: hidden;
   background: white;
@@ -51,7 +51,7 @@
   .card-bar-info {
   padding-right: 10px;
   padding-left: 10px;
-  padding-top: 16px;
+  padding-top: 10px;
   position: relative;
   }
 }
@@ -94,7 +94,7 @@
 .card-bar-title h5 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 6px;
 }
 
 .card-bar-review {
@@ -247,11 +247,14 @@
 
 .position-meter {
   p {
-    font-size: 10px;
+    font-size: 12px;
     margin: 0;
     padding: 5px;
-    // padding-left: 3px;
   }
+}
+
+.fa-map-marker-alt:before {
+  font-size: 18px;
 }
 
 /*--------------------Cards elements-------------------*/
