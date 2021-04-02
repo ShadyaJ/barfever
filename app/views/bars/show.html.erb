@@ -57,34 +57,42 @@
 
 
 
-
-  <h5 class="section-title">Events</h5>
-  <div class="homepage-group">
-    <div class="glide-events-nearby glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides" style="list-style: none;">
-          <% @events.each do |event|  %>
-            <%= link_to event_path(event, redirection: "bar-show") do %>
-              <li class="glide__slide">
-                <%= render "pages/cards/card-event-small", event: event %>
-              </li>
-            <% end %>
+  <% if @bar.events.empty? == false %>
+    <h5 class="section-title">Events</h5>
+    <div class="homepage-group">
+      <% if @bar.events.count == 1 %>
+        <% @events.each do |event| %>
+          <%= link_to event_path(event, redirection: "bar-show") do %>
+            <%= render "pages/cards/card-event-small", event: event %>
           <% end %>
-        </ul>
-      </div>
-      <% unless @events.empty? %>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+        <% end %>
+      <% else %>
+        <div class="glide-2 glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides" style="list-style: none;">
+              <% @events.each do |event|  %>
+                <%= link_to event_path(event, redirection: "bar-show") do %>
+                  <li class="glide__slide">
+                    <%= render "pages/cards/card-event-small", event: event %>
+                  </li>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+          <% unless @events.empty? %>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  </div>
-
+  <% end %>
 
   <h5 class="section-title">Photos of the night</h5>
   <div class="photos-night">

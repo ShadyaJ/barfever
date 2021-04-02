@@ -20,7 +20,7 @@
     <div class="btn-filter-home" id="btn-filter-left">
       <%= link_to bars_path(tag: "Bar") do %>
         <%= svg('icon-beer') %>
-        <p>Bar/Pub</p>
+        <p>Bar</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
@@ -38,7 +38,7 @@
     <div class="btn-filter-home" id="btn-filter-right">
       <%= link_to bars_path(tag_2: true) do %>
         <%= svg('icon-terrasse') %>
-        <p>Terrasse</p>
+        <p>Terrace</p>
       <% end %>
     </div>
   </div>
@@ -56,7 +56,7 @@
 <div class="homepage-container">
   <div class="homepage-group">
     <h1>Trendy bars</h1>
-    <div class="glide-trendy-bars glide">
+    <div class="glide-1 glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
           <% @bars.each do |bar|  %>
@@ -85,7 +85,7 @@
       <h2>Events nearby</h2>
       <%= link_to  "Show all", "", class: "btn btn-rounded" %>
     </div>
-    <div class="glide-events-nearby glide">
+    <div class="glide-2 glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides" style="list-style: none;">
           <% @events.each do |event|  %>
@@ -114,15 +114,15 @@
       <h2>Bars nearby</h2>
       <%= link_to  "Show all", "", class: "btn btn-rounded" %>
     </div>
-    <div class="glide-based-profile glide">
+    <div class="glide-2 glide">
       <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides" style="list-style: none;">
+        <ul class="glide__slides">
           <% @bars.each do |bar|  %>
-            <%= link_to bar_path(bar, redirection: "home") do %>
-              <li class="glide__slide">
-                <%= render "pages/cards/card-bar-small", bar: bar%>
-              </li>
-            <% end %>
+            <li class="glide__slide">
+              <%= link_to bar_path(bar, redirection: "home") do %>
+                  <%= render "pages/cards/card-bar-small", bar: bar%>
+              <% end %>
+            </li>
           <% end %>
         </ul>
       </div>
@@ -139,6 +139,3 @@
 
 <!-- Map -->
 
-    </div>
-  </div>
-</div>

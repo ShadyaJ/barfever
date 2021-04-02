@@ -7,10 +7,17 @@
 
   <div class="bar-header">
     <div class="title">
-      <h2>Bars</h2>
+    <h2>
+      <% if params[:tag].present? %>
+        <%= params[:tag].pluralize %>
+      <% elsif params[:tag_2].present? %>
+        Terraces
+      <% else %>
+        Bars
+      <% end %>
+    </h2>
     </div>
   </div>
-
 
 <!-- Cards container -->
 <div class="index-container">
@@ -21,13 +28,4 @@
   <% end %>
 </div>
 
-<div class="btn-filter-map">
-  <div class="btn-filter">
-    <i class="fas fa-filter"></i>
-    <p>FILTERS</p>
-  </div>
-  <div class="btn-map">
-    <i class="fas fa-map-marked-alt"></i>
-    <p>MAP</p>
-  </div>
-</div>
+<%= render 'shared/index-btn' %>
