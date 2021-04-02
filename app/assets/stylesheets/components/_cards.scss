@@ -12,14 +12,14 @@
     object-fit: cover;
   }
   .card-bar-info {
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 16px;
-  position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 16px;
+    position: relative;
   }
 }
 
-.card-bar-position {
+.card-bar-small-position {
   display: flex;
   margin: 0;
   bottom: 5px;
@@ -31,6 +31,10 @@
   width: 148px;
   justify-content: space-between;
   bottom: 5px;
+}
+
+.card-bar-small-show-reviews span{
+  font-size: 11px;
 }
 
 /*-------------Cards Bars small-----------------*/
@@ -48,6 +52,7 @@
     width: 100%;
     object-fit: cover;
   }
+
   .card-bar-info {
   padding-right: 10px;
   padding-left: 10px;
@@ -245,6 +250,10 @@
   padding-left: 10px;
 }
 
+.position-text i{
+  font-size: 18px;
+}
+
 .position-meter {
   p {
     font-size: 12px;
@@ -253,9 +262,12 @@
   }
 }
 
-.fa-map-marker-alt:before {
-  font-size: 18px;
+.position-text-small i{
+  font-size: 14px;
 }
+
+
+
 
 /*--------------------Cards elements-------------------*/
 

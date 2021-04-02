@@ -68,7 +68,7 @@ csv_events.each do |row|
   t.name = row['Name']
   t.category = row['Category']
   t.description = row['Description']
-  t.price = row['Price'].to_i
+  t.price = row['Price']
   t.date = row['Date']
   t.photo_url_1 = row['Photo']
   t.bar = Bar.find_by(name: row['Bar'])
