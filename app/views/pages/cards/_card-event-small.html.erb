@@ -10,11 +10,13 @@
       <h5><%= event.name %></h5>
     </div>
 
-
-
     <div class="card-event-position-price">
       <div class="price">
-        <p><%= event.price %></p>
+        <%if event.price.to_i == 0  %>
+          <p>free</p>
+        <% else %>
+          <p><%= "#{event.price}.-" %></p>
+        <% end %>
       </div>
       <div class="card-event-position">
         <div class="position-text-small">

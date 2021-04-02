@@ -88,12 +88,11 @@
   width: 121px;
   justify-content: center;
   align-items: center;
-
   p {
     font-size: 16px;
     margin: 0;
     color: white;
-  }
+  };
 }
 
 .card-bar-title h5 {
@@ -124,7 +123,7 @@
 /*--------------------Cards event small-------------------*/
 
 .card-event-small {
-  height: 192px;
+  height: 200px;
   width: 168px;
   overflow: hidden;
   background: white;
@@ -239,8 +238,9 @@
 
 
 .price p {
-  font-size: 10px;
+  font-size: 14px;
   margin: 0;
+  font-weight: bold;
 }
 /*--------------------Cards event element-------------------*/
 /*--------------------Cards elements-------------------*/
