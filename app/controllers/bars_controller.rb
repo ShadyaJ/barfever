@@ -3,7 +3,8 @@ class BarsController < ApplicationController
 
   def index
     if params[:query].present?
-      @bars = Bar.where("address_city ILIKE?", "%#{params[:query]}%")
+      sql_query = "address_city ILIKE :query OR name ILIKE :query"
+      @bars = Bar.where(sql_query, query: "%#{params[:query]}%")
     elsif params[:tag]
       @bars = Bar.where(category: params[:tag])
     elsif params[:tag_2]
