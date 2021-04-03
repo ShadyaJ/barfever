@@ -10,7 +10,6 @@
     </div>
   </div>
 
-
 <!-- Cards container -->
 <div class="index-container">
   <% @events.each do |event|  %>
@@ -20,13 +19,4 @@
     <% end %>
 </div>
 
-<div class="btn-filter-map">
-  <div class="btn-filter">
-    <i class="fas fa-filter"></i>
-    <p>FILTERS</p>
-  </div>
-  <div class="btn-map">
-    <i class="fas fa-map-marked-alt"></i>
-    <p>MAP</p>
-  </div>
-</div>
+<%= render 'shared/index-btn' %>
