@@ -2,25 +2,25 @@
   background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), asset-url('img-banner-homepage.jpg');
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
-}
-
-#input-banner-home-group {
-  width: 200px;
-  display: block;
-  margin : 0 auto;
+  padding: 60px 0;
 }
 
 .input-banner-home input {
   border-radius: 20px;
   display: block;
   margin : 0 auto;
-  width: 200px;
+  width: 250px;
   height: 35px;
   text-align: center;
   font-size: 16px;
 }
 
 #container-banner-home {
-  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  .input-group {
+    padding-left: 50px;
+    margin-bottom: 0!important;
+  }
 }
