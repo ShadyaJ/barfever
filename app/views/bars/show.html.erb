@@ -47,13 +47,17 @@
     </div>
   </div>
 
-  <div id="map" class="small_size_map"
-   data-markers="<%= @markers.to_json %>"
-   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
- </div>
- <%= link_to full_map_bar_path(@bar), class: "show-map-expand" do %>
-   <i class="fas fa-expand-alt"></i>
- <% end %>
+  <div class= "card-bar-show-map">
+    <div id="map" class="small_size_map"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
+    <%= link_to full_map_bar_path(@bar), class: "show-map-expand" do %>
+      <i class="fas fa-expand-alt"></i>
+    <% end %>
+  </div>
+
 
 
   <% if @bar.events.empty? == false %>
@@ -100,10 +104,10 @@
     <img class="photo" src="https://images.unsplash.com/photo-1528495612343-9ca9f4a4de28?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
     <img class="photo" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
     <img class="photo" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHBhcnR5fGVufDB8fDB8&auto=format&fit=crop&w=900&q=60" alt="">
-    <img class="photo" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHBhcnR5fGVufDB8fDB8&auto=format&fit=crop&w=900&q=60" alt="">
-    <img class="photo" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHBhcnR5fGVufDB8fDB8&auto=format&fit=crop&w=900&q=60" alt="">
     <img class="photo" src="https://images.unsplash.com/photo-1438557068880-c5f474830377?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fHBhcnR5fGVufDB8fDB8&auto=format&fit=crop&w=900&q=60" alt="">
-    <img class="photo" src="https://images.unsplash.com/photo-1438557068880-c5f474830377?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjl8fHBhcnR5fGVufDB8fDB8&auto=format&fit=crop&w=900&q=60" alt="">
+    <img class="photo" src="https://images.unsplash.com/photo-1496843916299-590492c751f4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
+    <img class="photo" src="https://images.unsplash.com/photo-1586105449897-20b5efeb3233?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
+    <img class="photo" src="https://images.unsplash.com/photo-1607504622473-62981bf57d13?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTB8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
   </div>
 
   <h5 class="section-title">Reviews</h5>
