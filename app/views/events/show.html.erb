@@ -33,7 +33,7 @@
           <h4><%= @event.name %></h4>
         </div>
         <h5><%= @event.bar.name %></h5>
-        <h6 class="card-event-price-grey"><%= @event.date %></h6>
+        <h6 class="card-event-price-grey"><%= @event.date.strftime('%d %B %Y') %></h6>
         <p><%= @event.description %></p>
 
 

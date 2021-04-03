@@ -32,9 +32,11 @@
   border: solid grey 0.5px;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
   padding: 5px;
+  padding-left: 20px;
   p {
     margin: 0;
     font-size: 14px;
+    color: black;
   }
   i {
     margin-right: 5px;
@@ -42,24 +44,28 @@
   }
 }
 
-.btn-map {
+.btn-map a{
   display: flex;
-  padding-left: 8px;
+  padding-left: 15px;
   border-left: solid grey 0.5px;
-  width: 100px;
-  height: 40px;
   align-items: center;
   justify-content: center;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.btn-filter {
+.btn-filter a{
   display: flex;
   padding-right: 8px;
-  width: 100px;
-  height: 40px;
   align-items: center;
   justify-content: center;
-
+  p {
+    padding-left: 5px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
 }
 // ---------------Index button map and filters-----------------
 // ---------------------- button bars show -------------------
