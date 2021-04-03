@@ -44,7 +44,4 @@ document.addEventListener('turbolinks:load', () => {
   // carousels
   initGlide();
 
-
-
-
 });
