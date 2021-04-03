@@ -3,9 +3,22 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :events, only: [:index, :show]
   get '/welcome', to: 'pages#welcome'
+  resources :bookings, only: [:new, :create]
+  resources :friends, only: [:new, :create]
+
+  resources :bookings, only: [:index] do
+    resources :friends, only: [:new, :create]
+  end
+
+
 
   resources :bars, only:[:index, :show, :incoming_event] do
     resources :reviews, only: [:new, :create]
+    resources :bookings, only: [:new, :create] do
+      get :new_event_booking, on: :collection
+    end
+
+
     member do
       get :full_map
     end

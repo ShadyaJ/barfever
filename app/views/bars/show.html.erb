@@ -39,8 +39,13 @@
 
     </div>
     <div class="card-bar-show-buttons">
-      <%= link_to "Guest List", "#", class: "btn btn-pink" %>
-      <%= link_to "Book Table", "#", class: "btn btn-outline-pink" %>
+      <% if user_signed_in? %>
+        <%= link_to "Guest List", new_bar_booking_path(@bar), class: "btn btn-pink" %>
+        <%= link_to "Book Table", new_bar_booking_path(@bar), class: "btn btn-outline-pink" %>
+      <% else %>
+        <%= link_to "Guest List", welcome_path, class: "btn btn-pink" %>
+        <%= link_to "Book Table", welcome_path, class: "btn btn-outline-pink" %>
+      <% end %>
       <% if @bar.reviews.where(user: current_user).empty?  %>
         <%= link_to "Add Review", new_bar_review_path(@bar), class: "btn btn-outline-pink" %>
       <% end %>

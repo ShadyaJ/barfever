@@ -1,0 +1,13 @@
+<div class="booking-container">
+  <div class="skip-btn">
+    <%= link_to 'Skip', bar_path(@bar) %>
+  </div>
+  <div class="booking-forme">
+    <p class="booking-title">Guest List forme</p>
+    <h2 class="booking-subtitle"> <%= @bar.name %></h2>
+    <%= simple_form_for [ @bar, @booking ] do |f| %>
+      <%= f.check_box :table_booking?, label: "Do you want table" %>
+      <%= f.submit "next", class: "booking-btn" %>
+    <% end %>
+  </div>
+</div>
