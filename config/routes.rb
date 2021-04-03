@@ -10,5 +10,5 @@ Rails.application.routes.draw do
       get :full_map
     end
   end
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/full_map_home', to: 'bars#full_map_home'
 end
