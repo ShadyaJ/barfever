@@ -1,5 +1,5 @@
 class BarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :full_map]
+  skip_before_action :authenticate_user!, only: [:index, :show, :full_map, :full_map_home]
 
   def index
     if params[:query].present?
@@ -29,6 +29,17 @@ class BarsController < ApplicationController
       lat: @bar.latitude,
       lng: @bar.longitude
     }]
+  end
+
+  def full_map_home
+    @bars = Bar.all
+    @markers = @bars.map do |bar|
+     {
+      lat: bar.latitude,
+      lng: bar.longitude,
+      infoWindow: render_to_string(partial: "bars/info_window", locals: { bar: bar })
+     }
+    end
   end
 
   private
