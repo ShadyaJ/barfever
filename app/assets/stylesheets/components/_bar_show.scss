@@ -30,7 +30,21 @@
   object-fit: cover;
 }
 
-.carousel-img-show {
-  background-size: cover;
-  background-position: center;
+.carousel-item {
+  img {
+    background-size: cover;
+    background-position: center;
+  }
+}
+.card-bar-show-music-style {
+  margin-top: 8px;
+  padding: 12px 6px;
+}
+
+.badge badge-pill badge-primary {
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }

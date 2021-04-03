@@ -1,0 +1,13 @@
+<!-- <h5>View Full Map</h5> -->
+<div class="full-map-show">
+  <div id="map" class="full_size_map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+
+  <%= link_to root_path, class: "show-map-back" do %>
+    <i class="fas fa-chevron-left"></i>
+  <% end %>
+</div>
+
