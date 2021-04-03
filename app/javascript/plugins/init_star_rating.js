@@ -1,14 +1,16 @@
-import 'jquery-bar-rating';
-import $ from 'jquery';
+// app/javascript/plugins/init_star_rating.js
+import "jquery-bar-rating";
 
 const initStarRating = () => {
-  $('#review_rating').barrating({
-    theme: 'css-stars',
-    onSelect: (value, text, event) => {
-      const form = $('form.review_form');
-      form.submit();
-    }
+  $('#review_review_experience').barrating({
+    theme: 'css-stars'
+  });
+  $('#review_review_drink').barrating({
+    theme: 'css-stars'
+  });
+  $('#review_review_music').barrating({
+    theme: 'css-stars'
   });
 };
 
-export { initStarRating }
+export { initStarRating };

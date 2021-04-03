@@ -1,11 +1,16 @@
-<div class='container'>
-  <div class='row'>
-    <div class='col-xs-4'>
-      <%= simple_form_for(@review, html: { class: 'review_form' }) do |f| %>
-        <%= f.input :content %>
-        <%= f.input :rating, collection: (1..5).to_a, label: 'Rate your experience' %>
-        <%= f.submit 'Send your review', class: 'd-none' %>
-      <% end %>
-    </div>
+
+<div class="review-container">
+  <div class="skip-btn">
+    <%= link_to 'Skip', bar_path(@bar) %>
+  </div>
+  <div class="review-forme">
+    <p class="review-title">Send a review for</p>
+    <h2 class="review-subtitle"> <%= @bar.name %> </h2>
+    <%= simple_form_for [ @bar, @review ] do |f| %>
+      <%= f.input :review_experience, collection: (1..5).to_a, label: "Rate your experience" %>
+      <%= f.input :review_drink, collection: (1..5).to_a, label: "Rate the drinks" %>
+      <%= f.input :review_music, collection: (1..5).to_a, label: "Rate the music" %>
+      <%= f.submit "Send your review", class: "review-btn" %>
+    <% end %>
   </div>
 </div>

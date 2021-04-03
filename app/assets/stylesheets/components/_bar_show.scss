@@ -13,7 +13,7 @@
 .card-bar-show-buttons {
   margin-top: 18px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .card-bar-price-grey {
@@ -28,4 +28,9 @@
   height: 210px;
   width: 100%;
   object-fit: cover;
+}
+
+.carousel-img-show {
+  background-size: cover;
+  background-position: center;
 }

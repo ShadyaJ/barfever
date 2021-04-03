@@ -12,14 +12,14 @@
     object-fit: cover;
   }
   .card-bar-info {
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 16px;
-  position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 16px;
+    position: relative;
   }
 }
 
-.card-bar-position {
+.card-bar-small-position {
   display: flex;
   margin: 0;
   bottom: 5px;
@@ -33,11 +33,15 @@
   bottom: 5px;
 }
 
+.card-bar-small-show-reviews span{
+  font-size: 11px;
+}
+
 /*-------------Cards Bars small-----------------*/
 /*-------------Cards Bars larg-----------------*/
 .card-bar-larg {
   margin-top: 16px;
-  height: 188px;
+  height: 200px;
   width: 348px;
   overflow: hidden;
   background: white;
@@ -48,10 +52,11 @@
     width: 100%;
     object-fit: cover;
   }
+
   .card-bar-info {
   padding-right: 10px;
   padding-left: 10px;
-  padding-top: 16px;
+  padding-top: 10px;
   position: relative;
   }
 }
@@ -83,18 +88,17 @@
   width: 121px;
   justify-content: center;
   align-items: center;
-
   p {
     font-size: 16px;
     margin: 0;
     color: white;
-  }
+  };
 }
 
 .card-bar-title h5 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 6px;
 }
 
 .card-bar-review {
@@ -119,7 +123,7 @@
 /*--------------------Cards event small-------------------*/
 
 .card-event-small {
-  height: 192px;
+  height: 200px;
   width: 168px;
   overflow: hidden;
   background: white;
@@ -235,8 +239,9 @@
 
 
 .price p {
-  font-size: 10px;
+  font-size: 14px;
   margin: 0;
+  font-weight: bold;
 }
 /*--------------------Cards event element-------------------*/
 /*--------------------Cards elements-------------------*/
@@ -246,14 +251,24 @@
   padding-left: 10px;
 }
 
+.position-text i{
+  font-size: 18px;
+}
+
 .position-meter {
   p {
-    font-size: 10px;
+    font-size: 12px;
     margin: 0;
     padding: 5px;
-    // padding-left: 3px;
   }
 }
+
+.position-text-small i{
+  font-size: 14px;
+}
+
+
+
 
 /*--------------------Cards elements-------------------*/
 
