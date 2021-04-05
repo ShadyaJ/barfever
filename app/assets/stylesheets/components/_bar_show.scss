@@ -18,6 +18,7 @@
 
 .card-bar-price-grey {
   color: grey;
+  padding: 6px;
 }
 
 .card-bar-show-map {
@@ -25,15 +26,14 @@
 }
 
 #img-bar-show {
-  height: 210px;
   width: 100%;
-  object-fit: cover;
+  height: 200px;
 }
 
 .carousel-item {
   img {
-    background-size: cover;
-    background-position: center;
+    object-fit: contain;
+    height: 100%;
   }
 }
 .card-bar-show-music-style {
@@ -42,6 +42,7 @@
 }
 
 .badge badge-pill badge-primary {
+  color:black;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
