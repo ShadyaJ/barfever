@@ -5,10 +5,16 @@ class BarsController < ApplicationController
     if params[:query].present?
       sql_query = "address_city ILIKE :query OR name ILIKE :query"
       @bars = Bar.where(sql_query, query: "%#{params[:query]}%")
-    elsif params[:tag]
-      @bars = Bar.where(category: params[:tag])
-    elsif params[:tag_2]
-      @bars = Bar.where(terrace: params[:tag_2])
+    elsif params[:tag_category]
+      @bars = Bar.where(category: params[:tag_category])
+    elsif params[:tag_terrace]
+      @bars = Bar.where(terrace: params[:tag_terrace])
+    elsif params[:tag_price]
+      @bars = Bar.where(price: params[:tag_price])
+    elsif params[:tag_music]
+      @bars = Bar.where(bar_musics: {musics: {name: params[:tag_music]}})
+    elsif params[:tag_review]
+      @bars = Bar.order(:review)
     else
       @bars = Bar.all
     end

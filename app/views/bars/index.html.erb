@@ -5,22 +5,85 @@
   </div>
 <% end %>
 
-  <div class="bar-header">
-    <div class="title">
+<div class="bar-header">
+  <div class="title">
     <h2>
-      <% if params[:tag].present? %>
-        <%= params[:tag].pluralize %>
-      <% elsif params[:tag_2].present? %>
+      <% if params[:tag_category].present? %>
+        <%= params[:tag_category].pluralize %>
+      <% elsif params[:tag_terrace].present? %>
         Terraces
       <% else %>
         Bars
       <% end %>
     </h2>
+  </div>
+</div>
+
+<div class="index-container">
+  <!-- Filters -->
+
+  <!-- Category filter -->
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Categories
+    </button>
+    <div class="dropdown-menu">
+      <div><%= link_to "Bar", bars_path(tag_category: "Bar") %></div>
+      <div><%= link_to "Pub", bars_path(tag_category: "Pub") %></div>
+      <div><%= link_to "Nightclub", bars_path(tag_category: "Nightclub") %></div>
+      <div><%= link_to "Lounge", bars_path(tag_category: "Lounge") %></div>
+      <div><%= link_to "Rooftop", bars_path(tag_category: "Rooftop") %></div>
+      <div><%= link_to "Cocktail Bar", bars_path(tag_category: "Cocktail Bar") %></div>
+      <div><%= link_to "Beer Bar", bars_path(tag_category: "Beer Bar") %></div>
+      <div><%= link_to "Champagne Bar", bars_path(tag_category: "Champagne Bar") %></div>
+      <div><%= link_to "Wine Bar", bars_path(tag_category: "Wine Bar") %></div>
+      <div><%= link_to "Sports Bar", bars_path(tag_category: "Sports Bar") %></div>
+      <div><%= link_to "Beach Bar", bars_path(tag_category: "Beach Bar") %></div>
+      <div><%= link_to "Shisha Bar", bars_path(tag_category: "Shisha Bar") %></div>
+      <div><%= link_to "Gay Bar", bars_path(tag_category: "Gay Bar") %></div>
+      <div><%= link_to "Adult", bars_path(tag_category: "Adult") %></div>
     </div>
   </div>
 
-<!-- Cards container -->
-<div class="index-container">
+  <!-- Price filter -->
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Prices
+    </button>
+    <div class="dropdown-menu">
+      <div><%= link_to "$", bars_path(tag_price: "$") %></div>
+      <div><%= link_to "$$", bars_path(tag_price: "$$") %></div>
+      <div><%= link_to "$$$", bars_path(tag_price: "$$$") %></div>
+    </div>
+  </div>
+
+  <!-- Music style filter -->
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Music styles
+    </button>
+    <div class="dropdown-menu">
+      <div><%= link_to "Jazz", bars_path(tag_music: "Jazz") %></div>
+      <div><%= link_to "Soul", bars_path(tag_music: "Soul") %></div>
+      <div><%= link_to "Rock", bars_path(tag_music: "Rock") %></div>
+      <div><%= link_to "Pop", bars_path(tag_music: "Pop") %></div>
+      <div><%= link_to "Dance / Electro", bars_path(tag_music: "Dance/Electro") %></div>
+      <div><%= link_to "Latino", bars_path(tag_music: "Latino") %></div>
+      <div><%= link_to "Metal", bars_path(tag_music: "Metal") %></div>
+      <div><%= link_to "80s Music", bars_path(tag_music: "80s Music") %></div>
+      <div><%= link_to "70s Music", bars_path(tag_music: "70s Music") %></div>
+      <div><%= link_to "Indie", bars_path(tag_music: "Indie") %></div>
+    </div>
+  </div>
+
+  <!-- Reviews filter -->
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm" type="button">
+      <%= link_to "Sort by reviews", bars_path %>
+    </button>
+  </div>
+
+  <!-- Cards container -->
   <% @bars.each do |bar|  %>
     <%= link_to bar_path(bar, redirection: "bar-index") do %>
       <%= render 'card-bar-larg', bar: bar%>
