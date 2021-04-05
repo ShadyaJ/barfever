@@ -1,1 +1,17 @@
-<h1>index booking</h1>
+<!-- Bar header -->
+<%= link_to root_path do %>
+  <div class="arrow-back">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+<% end %>
+  <div class="bar-header">
+    <div class="title">
+      <h2>Messages</h2>
+    </div>
+  </div>
+
+<div class="index-container">
+  <% @bookings.each do |booking|  %>
+      <%= render 'card-booking', booking: booking%>
+    <% end %>
+</div>

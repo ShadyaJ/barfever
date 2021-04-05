@@ -267,12 +267,58 @@
   font-size: 14px;
 }
 
-
-
-
 /*--------------------Cards elements-------------------*/
+/*--------------------Cards messages-------------------*/
+.card-booking {
+  margin-top: 16px;
+  height: 140px;
+  width: 348px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 6px;
+}
 
+.booking-title {
+  width: 348px;
+  border-radius: 6px 6px 0px 0px;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+   p {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+  }
+}
+  #table {
+    background-color: #23CE6B;
+  }
+  #guest-list {
+    background-color: #0E273C;
+  }
 
+.booking-info {
+  padding: 0px 8px;
+}
+.booking-bar-name {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.booking-id {
+  display: flex;
+  justify-content: space-between
+}
+
+// #booking-date {
+//   background-color: $pink;
+//   border-radius: 6px;
+//   padding: 0px 3px;
+//   color: white;
+// }
+
+/*--------------------Cards messages-------------------*/
 
 
 

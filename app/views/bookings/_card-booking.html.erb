@@ -1,0 +1,25 @@
+<div class="card-booking">
+  <% if booking.table_booking? %>
+    <div id="table" class="booking-title">
+      <p><%= "Booking table confirmation"%></p>
+    </div>
+  <% else %>
+    <div id="guest-list" class="booking-title">
+      <p> <%= "Guest list confirmation" %></p>
+    </div>
+  <% end %>
+  <div class="booking-info">
+    <div class="booking-bar-name">
+      <%= booking.bar.name%>
+    </div>
+    <div class="booking-id">
+      <div class="booking-id-name">Name : <b><%= "#{booking.user.first_name}"%></b></div>
+      <div class="booking-id-last-name">Last name : <b><%= "#{booking.user.last_name}"%></b></div>
+    </div>
+    <div class="booking-id">
+      <div>Nbr.People : <b><%= "#{booking.friends.count}"%></b></div>
+      <div id="booking-date"><b><%= booking.date.strftime('%d %B %Y')%></b> </div>
+    </div>
+  </div>
+</div>
+
