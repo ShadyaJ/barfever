@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :events, only: [:index, :show]
   get '/welcome', to: 'pages#welcome'
-  resources :bookings, only: [:new, :create]
+  resources :bookings, only: [:new, :create, :show]
   resources :friends, only: [:new, :create]
 
   resources :bookings, only: [:index] do

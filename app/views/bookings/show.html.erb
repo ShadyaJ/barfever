@@ -1,0 +1,67 @@
+
+<% if @redirection == "booking-index"%>
+  <%= link_to bookings_path do %>
+    <div class="arrow-back-show">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+  <% end %>
+  <% else %>
+    <%= link_to root_path do %>
+      <div class="arrow-back-show">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+    <% end %>
+<% end %>
+
+<div class="img-show">
+  <img src="<%= @booking.bar.photo_url_1 %>">
+</div>
+
+
+<% if @booking.table_booking? %>
+  <div id="table-show" class="booking-title-show">
+    <p><%= "Booking table confirmation"%></p>
+  </div>
+<% else %>
+  <div id="guest-list-show" class="booking-title-show">
+    <p> <%= "Guest list confirmation" %></p>
+  </div>
+<% end %>
+
+<div class="show-container">
+  <div class="card-booking-show">
+    <div class="card-booking-show-body">
+      <div class="card-booking-bar-name">
+        <h4><%= @booking.bar.name %></h4>
+      </div>
+
+      <div class="booking-id">
+        <div class="booking-id-name">Name : <b><%= "#{@booking.user.first_name}"%></b></div>
+        <div class="booking-id-last-name">Last name : <b><%= "#{@booking.user.last_name}"%></b></div>
+      </div>
+
+      <div class="booking-id">
+        <div>Nbr.People : <b><%= "#{@booking.friends.count + 1}"%></b></div>
+        <div id="booking-date"> Date : <b><%= @booking.date.strftime('%d %B %Y')%></b> </div>
+      </div>
+
+      <div class="guests-list">
+        <div>
+          <p> Guests :</p>
+        </div>
+        <div>
+          <ul>
+            <% @booking.friends.each do |friend| %>
+                <li>
+                  <%= "#{friend.first_name}, #{friend.last_name}" %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div id="booking-date"> Valid until : <b><%= "#{@booking.date.strftime('%d %B %Y')} 12:00 PM"%></b> </div>
+
+    </div>
+  </div>
+</div>
+

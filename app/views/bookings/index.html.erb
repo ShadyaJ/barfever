@@ -12,6 +12,8 @@
 
 <div class="index-container">
   <% @bookings.each do |booking|  %>
+    <%= link_to booking_path(booking, redirection: "booking-index") do %>
       <%= render 'card-booking', booking: booking%>
     <% end %>
+  <% end %>
 </div>

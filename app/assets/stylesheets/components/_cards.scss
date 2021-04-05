@@ -271,7 +271,7 @@
 /*--------------------Cards messages-------------------*/
 .card-booking {
   margin-top: 16px;
-  height: 140px;
+  height: 130px;
   width: 348px;
   overflow: hidden;
   background: white;
@@ -282,7 +282,7 @@
 .booking-title {
   width: 348px;
   border-radius: 6px 6px 0px 0px;
-  padding: 10px;
+  padding: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.3);
    p {
     font-size: 18px;
@@ -299,11 +299,12 @@
 
 .booking-info {
   padding: 0px 8px;
+  font-size: 14px;
 }
 .booking-bar-name {
   font-size: 18px;
-  margin: 0;
-  font-weight: bold;
+  margin: 5px 0px;
+  // font-weight: bold;
 }
 
 .booking-id {

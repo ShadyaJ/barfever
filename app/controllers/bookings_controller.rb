@@ -3,6 +3,11 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+    @redirection = params[:redirection]
+  end
+
   def new
     @bar = Bar.find(params[:bar_id])
     @booking = Booking.new
