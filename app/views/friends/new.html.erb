@@ -13,7 +13,9 @@
       <p>Your friends added :</p>
     <% end %>
     <% @booking.friends.each do |friend| %>
-      <%= "- #{friend.first_name.capitalize}, #{friend.last_name.capitalize}" %>
+      <ul>
+        <li><%= "#{friend.first_name.capitalize} #{friend.last_name.capitalize}" %></li>
+      </ul>
     <% end %>
     <div class="friend-btn",>
       <%= link_to "Submit",  bookings_path %>
