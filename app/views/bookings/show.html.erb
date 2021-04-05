@@ -41,13 +41,13 @@
       </div>
 
       <div class="booking-id">
-        <div>Nbr.People : <b><%= "#{@booking.friends.count + 1}"%></b></div>
+        <div>Nbr.Guests : <b><%= "#{@booking.friends.count + 1}"%></b></div>
         <div id="booking-date"> Date : <b><%= @booking.date.strftime('%d %B %Y')%></b> </div>
       </div>
 
       <div class="guests-list">
         <div>
-          <p> Guests :</p>
+          <p><%= "#{@booking.friends.count} Guests :" %> </p>
         </div>
         <div>
           <ul>
