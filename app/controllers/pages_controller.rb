@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @bars = Bar.all
-    @events = Event.all
+    @events = chunk(Event.all, 2)
     @markers = @bars.map do |bar|
      {
       lat: bar.latitude,
@@ -16,4 +16,16 @@ class PagesController < ApplicationController
   def welcome
   end
 
+  private 
+
+  def chunk(array, chunk_size)
+    i = 0
+    new_array = []
+    array_size = array.size
+    while i < array_size
+      new_array << array.slice(i ... i + chunk_size)
+      i += chunk_size
+    end
+    return new_array
+  end
 end
