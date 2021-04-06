@@ -1,8 +1,10 @@
 
 
 <div class="welcome-container">
-  <div class="welcome-skip-btn">
-    <%= link_to 'Skip', root_path %>
+  <div class="cross-back-btn">
+    <%= link_to root_path do %>
+            <i class="fas fa-times"></i>
+      <% end %>
   </div>
   <h2 class="welcome-title">Welcome to BarFever</h2>
     <p class="welcome-subtitle">We know the perfect place!</p>

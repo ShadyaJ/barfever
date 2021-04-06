@@ -271,7 +271,7 @@
 /*--------------------Cards messages-------------------*/
 .card-booking {
   margin-top: 16px;
-  height: 130px;
+  height: 150px;
   width: 348px;
   overflow: hidden;
   background: white;
@@ -279,7 +279,9 @@
   border-radius: 6px;
 }
 
-.booking-title {
+.booking-title-card {
+  display: flex;
+  justify-content: center;
   width: 348px;
   border-radius: 6px 6px 0px 0px;
   padding: 8px;
@@ -309,15 +311,13 @@
 
 .booking-id {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
-// #booking-date {
-//   background-color: $pink;
-//   border-radius: 6px;
-//   padding: 0px 3px;
-//   color: white;
-// }
+.booking-id-date {
+  display: flex;
+  justify-content: flex-end;
+}
 
 /*--------------------Cards messages-------------------*/
 
