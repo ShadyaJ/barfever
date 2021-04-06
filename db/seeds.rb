@@ -1,6 +1,12 @@
 puts "Destroy users"
 User.destroy_all
 
+puts "Destroy bars"
+Bar.destroy_all
+
+puts "Destroy events"
+Event.destroy_all
+
 puts "Destroy reviews"
 Review.destroy_all
 
@@ -10,11 +16,8 @@ BarMusic.destroy_all
 puts "Destroy musics"
 Music.destroy_all
 
-puts "Destroy bars"
-Bar.destroy_all
 
-puts "Destroy events"
-Event.destroy_all
+
 
 
 
