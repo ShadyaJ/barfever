@@ -3,11 +3,10 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div id="img-bar-show" class="carousel-inner">
     <div class="carousel-item active">
-      <div></div>
-      <img src="<%= @bar.photo_url_1 %>">
+      <img src="<%= @bar.photo_url_1 %>" class="d-block h-100 w-100">
     </div>
     <div class="carousel-item">
-      <img src="<%= @bar.photo_url_2 %>">
+      <img src="<%= @bar.photo_url_2 %>" class="d-block h-100 w-100">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -25,6 +24,11 @@
     <div class="card-bar-show-body">
         <h6 class="card-bar-show-category"><%= @bar.category %></h6>
         <h4><%= @bar.name %></h4>
+        <% @musics.each do |music| %>
+        <div class="badge badge-pill badge-warning">
+         <%= music.name %>
+        </div>
+      <% end %>
         <h6 class="card-bar-price-grey"><%= @bar.price %></h6>
         <p><%= @bar.description %></p>
         <div class="card-bar-show-reviews">
@@ -109,7 +113,5 @@
     <img class="photo" src="https://images.unsplash.com/photo-1586105449897-20b5efeb3233?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
     <img class="photo" src="https://images.unsplash.com/photo-1607504622473-62981bf57d13?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTB8fHBhcnR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="">
   </div>
-
-  <h5 class="section-title">Reviews</h5>
 </div>
 

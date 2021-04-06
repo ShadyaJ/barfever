@@ -21,6 +21,7 @@ class BarsController < ApplicationController
     }]
     @events = @bar.events
     @redirection = params[:redirection]
+    @musics = @bar.musics
   end
 
   def full_map
