@@ -124,3 +124,24 @@
   }
 }
 // ---------------------- button show -------------------
+// ---------------------- button simple-form -------------------
+
+// #cross-back-btn {
+//   font-size: 28px;
+// }
+
+.cross-back-btn a {
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  color: lightgrey;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+  &:hover {
+    color: $purple;
+  }
+}
+
+// ---------------------- button simple-form -------------------
+

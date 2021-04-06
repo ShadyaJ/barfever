@@ -1,8 +1,10 @@
 <div class="friend-container">
-  <div class="skip-btn">
-    <%= link_to 'Skip', bar_path(@booking.bar) %>
-  </div>
   <div class="friend-forme">
+    <div class="cross-back-btn">
+      <%= link_to bar_path(@booking.bar) do %>
+        <i class="fas fa-times"></i>
+      <% end %>
+    </div>
     <p class="friend-title">Add Friends</p>
     <%= simple_form_for [ @booking, @friend ] do |f| %>
       <%= f.input :first_name, label: "First name" %>

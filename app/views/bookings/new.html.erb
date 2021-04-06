@@ -1,11 +1,10 @@
-
-
-
 <div class="booking-container">
-  <div class="skip-btn">
-    <%= link_to 'Skip', bar_path(@bar) %>
-  </div>
   <div class="booking-forme">
+    <div class="cross-back-btn">
+      <%= link_to bar_path(@bar) do %>
+        <i class="fas fa-times"></i>
+      <% end %>
+    </div>
     <p class="booking-title">Guest List form for:</p>
     <h2 class="booking-subtitle"> <%= @bar.name %></h2>
     <%= simple_form_for [ @bar, @booking ] do |f| %>
