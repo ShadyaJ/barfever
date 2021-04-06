@@ -60,7 +60,7 @@
     <!-- Music style filter -->
     <div class="btn-group">
       <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Musics
+        Music styles
       </button>
       <div class="dropdown-menu">
         <div><%= link_to "Jazz", bars_path(tag_music: "Jazz") %></div>
@@ -74,16 +74,6 @@
         <div><%= link_to "70s Music", bars_path(tag_music: "70s Music") %></div>
         <div><%= link_to "Indie", bars_path(tag_music: "Indie") %></div>
       </div>
-    </div>
-
-    <!-- Reviews filter -->
-    <div class="review-filter-btn btn-group">
-      <button class="btn btn-secondary btn-sm" type="button">
-        <%= link_to bars_path(tag_review: "review") do %>
-          <p>Reviews</p>
-          <i class="fas fa-sort-amount-down"></i>
-        <% end %>
-      </button>
     </div>
   </div>
   <!-- Cards container -->

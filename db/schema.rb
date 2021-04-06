@@ -75,6 +75,14 @@ ActiveRecord::Schema.define(version: 2021_04_02_141136) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
+  create_table "searches", force: :cascade do |t|
+    t.string "category"
+    t.string "price"
+    t.string "terrasse"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

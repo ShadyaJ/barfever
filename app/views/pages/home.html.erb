@@ -84,7 +84,7 @@
   <div class="homepage-group">
     <div class="title-with-btn">
       <h2>Events nearby</h2>
-      <%= link_to  "Show all", "", class: "btn btn-rounded" %>
+      <%= link_to  "Show all", events_path, class: "btn btn-rounded" %>
     </div>
     <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -115,12 +115,12 @@
   <div class="homepage-group">
     <div class="title-with-btn">
       <h2>Bars nearby</h2>
-      <%= link_to  "Show all", "", class: "btn btn-rounded" %>
+      <%= link_to  "Show all", bars_path, class: "btn btn-rounded" %>
     </div>
     <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <% @bars.each do |bar_items| %>
-          <div class="<%= bar_items == @bars.first ? 'carousel-item active' : 'carousel-item' %>">
+        <% @bars_nearby.each do |bar_items| %>
+          <div class="<%= bar_items == @bars_nearby.first ? 'carousel-item active' : 'carousel-item' %>">
             <div class="splitted">
               <% bar_items.each do |bar| %>
                 <%= link_to bar_path(bar, redirection: "home") do %>
