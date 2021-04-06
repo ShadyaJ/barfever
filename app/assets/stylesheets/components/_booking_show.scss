@@ -1,0 +1,56 @@
+.card-booking-show {
+  margin-top: 32px;
+  padding: 32px 16px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-booking-bar-name {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+
+.img-show {
+  height: 200px;
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.booking-title-show{
+  position: absolute;
+  right: 10px;
+  top: 172px;
+  display: flex;
+  border-radius: 5px;
+  padding: 4px;
+  width: 356.25px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+
+  p {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+  }
+}
+
+  #table-show {
+    background-color: #23CE6B;
+  }
+  #guest-list-show {
+    background-color: #0E273C;
+  }
+
+  .guests-list {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }

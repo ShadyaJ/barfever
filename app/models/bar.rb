@@ -4,6 +4,7 @@ class Bar < ApplicationRecord
   has_many :bar_musics, dependent: :destroy
   has_many :musics, through: :bar_musics
   has_many :reviews, dependent: :destroy
+  has_many :bookings, dependent: :destroy
   validates :name, :category, :description, :price, :address_street, :address_zipcode, :address_city, presence: true
 
   geocoded_by :full_address
