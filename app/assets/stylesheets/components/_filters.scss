@@ -1,3 +1,5 @@
+// homepage
+
 //div btn sans btn event
 .btn-filter-list {
   display: flex;
@@ -65,3 +67,41 @@
 #btn-filter-right {
   border-radius: 0 10px 0 0;
 }
+
+// homepage
+// index bars
+.filters-index {
+  padding: 0;
+  button {
+    background-color: $purple;
+    border-color: $purple;
+    &:focus {
+      background-color: $purple!important;
+      border-color: $purple!important;
+    }
+    &:hover {
+      background-color: $purple!important;
+      border-color: $purple!important;
+    }
+  }
+  .dropdown-menu {
+    div {
+      float: left;
+      width: 96%;
+      border-bottom:1px solid #E0E0E0;
+      margin: 0px;  
+      transition: all 275ms ease-in-out;
+      display: block;
+      padding: 5px;
+    }
+  }
+}
+
+.review-filter-btn a{
+  display: flex;
+  p {
+    margin-bottom: 0;
+    padding-right: 4px;
+  }
+}
+//index bars

@@ -8,7 +8,13 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    if params[:tag_category]
+      @events = Event.where(category: params[:tag_category])
+    elsif params[:tag_price]
+      @events = Event.all.sort_by &:price
+    else
+      @events = Event.all
+    end
   end
 
   private
