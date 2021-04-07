@@ -1,158 +1,161 @@
-<!-- Banner Homepage -->
-<div class="banner-home">
-  <div class="container" id="container-banner-home">
-    <div class="input-group input-group-sm mb-3" id="input-banner-home-group">
-      <%= form_tag bars_path, method: :get, class:"input-banner-home" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Search by city or by name"
-        %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<!-- Group of filters -->
-<div class="container-btn-filters">
-  <div class="btn-filter-list">
-    <div class="btn-filter-home" id="btn-filter-left">
-      <%= link_to bars_path(tag_category: "Bar") do %>
-        <%= svg('icon-beer') %>
-        <p>Bar</p>
-      <% end %>
-    </div>
-    <div class="btn-filter-home">
-      <%= link_to bars_path(tag_category: "Nightclub") do %>
-        <%= svg('icon-nightclub') %>
-        <p>Nightclub</p>
-      <% end %>
-    </div>
-    <div class="btn-filter-home">
-      <%= link_to bars_path(tag_category: "Lounge") do %>
-        <%= svg('icon-lounge') %>
-        <p>Lounge</p>
-      <% end %>
-    </div>
-    <div class="btn-filter-home" id="btn-filter-right">
-      <%= link_to bars_path(tag_terrace: true) do %>
-        <%= svg('icon-terrasse') %>
-        <p>Terrace</p>
-      <% end %>
-    </div>
-  </div>
-  <div class="btn-filter-list">
-    <div class="btn-filter-home btn-filter-events">
-      <%= link_to events_path,id:"filter-events" do %>
-        <p>Events</p>
-        <%= svg('icon-calendar') %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<!-- Trendy bars section -->
-<div class="homepage-container">
-  <div class="homepage-group">
-    <h1>Trendy bars</h1>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <% @trendy_bars.each do |bar| %>
-          <% if bar == @trendy_bars.first %>
-            <div class="carousel-item active">
-          <% else %>
-            <div class="carousel-item">
-          <% end %>
-              <%= link_to bar_path(bar, redirection: "home") do %>
-                <%= render "pages/cards/card-bar-larg", bar: bar%>
-              <% end %>
-            </div>
+<div class="homepage-body">
+  <!-- Banner Homepage -->
+  <div class="banner-home">
+    <div class="container" id="container-banner-home">
+      <div class="input-group input-group-sm mb-3" id="input-banner-home-group">
+        <%= form_tag bars_path, method: :get, class:"input-banner-home" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search by city or by name"
+          %>
         <% end %>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
   </div>
 
-<!-- Events nearby section -->
-  <div class="homepage-group">
-    <div class="title-with-btn">
-      <h2>Events nearby</h2>
-      <%= link_to  "Show all", events_path, class: "btn btn-rounded" %>
-    </div>
-    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <% @events.each do |event_items| %>
-          <div class="<%= event_items == @events.first ? 'carousel-item active' : 'carousel-item' %>">
-            <div class="splitted">
-              <% event_items.each do |event| %>
-                <%= link_to event_path(event, redirection: "home") do %>
-                  <%= render "pages/cards/card-event-small", event: event%>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
+  <!-- Group of filters -->
+  <div class="container-btn-filters">
+    <div class="btn-filter-list">
+      <div class="btn-filter-home" id="btn-filter-left">
+        <%= link_to bars_path(tag_category: "Bar") do %>
+          <%= svg('icon-beer') %>
+          <p>Bar</p>
         <% end %>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="btn-filter-home">
+        <%= link_to bars_path(tag_category: "Nightclub") do %>
+          <%= svg('icon-nightclub') %>
+          <p>Nightclub</p>
+        <% end %>
+      </div>
+      <div class="btn-filter-home">
+        <%= link_to bars_path(tag_category: "Lounge") do %>
+          <%= svg('icon-lounge') %>
+          <p>Lounge</p>
+        <% end %>
+      </div>
+      <div class="btn-filter-home" id="btn-filter-right">
+        <%= link_to bars_path(tag_terrace: true) do %>
+          <%= svg('icon-terrasse') %>
+          <p>Terrace</p>
+        <% end %>
+      </div>
+    </div>
+    <div class="btn-filter-list">
+      <div class="btn-filter-home btn-filter-events">
+        <%= link_to events_path,id:"filter-events" do %>
+          <p>Events</p>
+          <%= svg('icon-calendar') %>
+        <% end %>
+      </div>
     </div>
   </div>
 
-<!-- Bars nearby section -->
-  <div class="homepage-group">
-    <div class="title-with-btn">
-      <h2>Bars nearby</h2>
-      <%= link_to  "Show all", bars_path, class: "btn btn-rounded" %>
-    </div>
-    <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <% @bars_nearby.each do |bar_items| %>
-          <div class="<%= bar_items == @bars_nearby.first ? 'carousel-item active' : 'carousel-item' %>">
-            <div class="splitted">
-              <% bar_items.each do |bar| %>
+  <!-- Trendy bars section -->
+  <div class="homepage-container">
+    <div class="homepage-group">
+      <h1>Trendy spots</h1>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @trendy_bars.each do |bar| %>
+            <% if bar == @trendy_bars.first %>
+              <div class="carousel-item active">
+            <% else %>
+              <div class="carousel-item">
+            <% end %>
                 <%= link_to bar_path(bar, redirection: "home") do %>
-                  <%= render "pages/cards/card-bar-small", bar: bar %>
+                  <%= render "pages/cards/card-bar-larg", bar: bar%>
                 <% end %>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
+              </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-<!-- Map -->
-  <div class="card-bar-show-map">
-    <div id="map" class="small_size_map"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 
-    <%= link_to full_map_home_path, class: "show-map-expand" do %>
-      <i class="fas fa-expand-alt"></i>
-    <% end %>
+  <!-- Events nearby section -->
+    <div class="homepage-group">
+      <div class="title-with-btn">
+        <h2>Events nearby</h2>
+        <%= link_to  "Show all", events_path, class: "btn btn-rounded" %>
+      </div>
+      <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @events.each do |event_items| %>
+            <div class="<%= event_items == @events.first ? 'carousel-item active' : 'carousel-item' %>">
+              <div class="splitted">
+                <% event_items.each do |event| %>
+                  <%= link_to event_path(event, redirection: "home") do %>
+                    <%= render "pages/cards/card-event-small", event: event%>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+  <!-- Bars nearby section -->
+    <div class="homepage-group">
+      <div class="title-with-btn">
+        <h2>Sites nearby</h2>
+        <%= link_to  "Show all", bars_path, class: "btn btn-rounded" %>
+      </div>
+      <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @bars_nearby.each do |bar_items| %>
+            <div class="<%= bar_items == @bars_nearby.first ? 'carousel-item active' : 'carousel-item' %>">
+              <div class="splitted">
+                <% bar_items.each do |bar| %>
+                  <%= link_to bar_path(bar, redirection: "home") do %>
+                    <%= render "pages/cards/card-bar-small", bar: bar %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+  <!-- Map -->
+    <div class="card-bar-show-map">
+      <div id="map" class="small_size_map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+      <%= link_to full_map_home_path, class: "show-map-expand" do %>
+        <i class="fas fa-expand-alt"></i>
+      <% end %>
+    </div>
   </div>
 </div>
+
 
 
