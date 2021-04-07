@@ -3,7 +3,7 @@
   padding: 32px 8px;
   background-color: white;
   border-radius: 6px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.3);
 }
 
 .card-event-bar-name {
@@ -22,7 +22,7 @@
   justify-content: space-around;
 }
 
-.card-event-price-grey {
+.card-event-date-grey {
   color: grey;
 }
 
@@ -45,17 +45,16 @@
   top: 302px;
   display: flex;
   background-color: $pink;
-  border-radius: 5px;
-  padding: 4px;
-  width: 180px;
+  border-radius: 6px;
+  padding: 3px;
+  width: 168px;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
-
   p {
     font-size: 24px;
     margin: 0;
     color: white;
   }
 }
+

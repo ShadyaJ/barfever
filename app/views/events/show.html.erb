@@ -33,19 +33,20 @@
           <h4><%= @event.name %></h4>
         </div>
         <h5><%= @event.bar.name %></h5>
-        <h6 class="card-event-price-grey"><%= @event.date.strftime('%d %B %Y') %></h6>
+        <h6 class="card-event-date-grey"><%= @event.date.strftime('%d %B %Y') %></h6>
+        <div>
+        <%if @event.price.to_i == 0  %>
+          <p>free</p>
+        <% else %>
+          <p><%= "#{@event.price}.-" %></p>
+        <% end %>
+      </div>
         <p><%= @event.description %></p>
 
 
     </div>
     <div class="card-event-show-buttons">
-      <% if user_signed_in? %>
-        <%= link_to "Guest List", new_event_booking_bar_bookings_path(@event.bar), class: "btn btn-pink" %>
-        <%= link_to "Book Table", new_event_booking_bar_bookings_path(@event.bar), class: "btn btn-outline-pink" %>
-      <% else %>
-        <%= link_to "Guest List", welcome_path, class: "btn btn-pink" %>
-        <%= link_to "Book Table", welcome_path, class: "btn btn-outline-pink" %>
-      <% end %>
+        <%= link_to "Go to venue", bar_path(@event.bar_id), class: "btn btn-pink" %>
     </div>
   </div>
 </div>
