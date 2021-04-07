@@ -24,7 +24,7 @@ class BarsController < ApplicationController
       lat: @bar.latitude,
       lng: @bar.longitude
     }]
-    @events = @bar.events
+    @events = chunk(@bar.events, 2)
     @redirection = params[:redirection]
   end
 
@@ -43,5 +43,18 @@ class BarsController < ApplicationController
       :name, :category, :description, :price,
       :address_street, :address_zipcode, :address_city, :user_id
     )
+  end
+
+  private
+
+  def chunk(array, chunk_size)
+    i = 0
+    new_array = []
+    array_size = array.size
+    while i < array_size
+      new_array << array.slice(i ... i + chunk_size)
+      i += chunk_size
+    end
+    return new_array
   end
 end

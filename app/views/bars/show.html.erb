@@ -65,28 +65,28 @@
           <% end %>
         <% end %>
       <% else %>
-        <div class="glide-2 glide">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides" style="list-style: none;">
-              <% @events.each do |event|  %>
-                <%= link_to event_path(event, redirection: "bar-show") do %>
-                  <li class="glide__slide">
-                    <%= render "pages/cards/card-event-small", event: event %>
-                  </li>
-                <% end %>
-              <% end %>
-            </ul>
+        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <% @events.each do |event_items| %>
+              <div class="<%= event_items == @events.first ? 'carousel-item active' : 'carousel-item' %>">
+                <div class="splitted">
+                  <% event_items.each do |event| %>
+                    <%= link_to event_path(event, redirection: "home") do %>
+                      <%= render "pages/cards/card-event-small", event: event%>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
           </div>
-          <% unless @events.empty? %>
-            <div class="glide__arrows" data-glide-el="controls">
-              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
-          <% end %>
+          <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       <% end %>
     </div>
