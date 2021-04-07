@@ -12,7 +12,7 @@ class BarsController < ApplicationController
     elsif params[:tag_price]
       @bars = Bar.where(price: params[:tag_price])
     elsif params[:tag_music]
-      @bars = Bar.joins(:bar_musics).where(bar_musics: params[:tag_music])
+      @bars = Bar.joins(:musics).where( musics: { name: params[:tag_music] } )
     else
       @bars = Bar.all
     end
