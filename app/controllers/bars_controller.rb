@@ -3,11 +3,16 @@ class BarsController < ApplicationController
 
   def index
     if params[:query].present?
-      @bars = Bar.where("address_city ILIKE?", "%#{params[:query]}%")
-    elsif params[:tag]
-      @bars = Bar.where(category: params[:tag])
-    elsif params[:tag_2]
-      @bars = Bar.where(terrace: params[:tag_2])
+      sql_query = "address_city ILIKE :query OR name ILIKE :query"
+      @bars = Bar.where(sql_query, query: "%#{params[:query]}%")
+    elsif params[:tag_category]
+      @bars = Bar.where(category: params[:tag_category])
+    elsif params[:tag_terrace]
+      @bars = Bar.where(terrace: params[:tag_terrace])
+    elsif params[:tag_price]
+      @bars = Bar.where(price: params[:tag_price])
+    elsif params[:tag_music]
+      @bars = Bar.joins(:bar_musics).where(bar_musics: params[:tag_music])
     else
       @bars = Bar.all
     end
@@ -19,7 +24,7 @@ class BarsController < ApplicationController
       lat: @bar.latitude,
       lng: @bar.longitude
     }]
-    @events = @bar.events
+    @events = chunk(@bar.events, 2)
     @redirection = params[:redirection]
     @musics = @bar.musics
   end
@@ -50,5 +55,18 @@ class BarsController < ApplicationController
       :name, :category, :description, :price,
       :address_street, :address_zipcode, :address_city, :user_id
     )
+  end
+
+  private
+
+  def chunk(array, chunk_size)
+    i = 0
+    new_array = []
+    array_size = array.size
+    while i < array_size
+      new_array << array.slice(i ... i + chunk_size)
+      i += chunk_size
+    end
+    return new_array
   end
 end

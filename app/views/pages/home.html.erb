@@ -6,11 +6,10 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Search by city"
+          placeholder: "Search by city or by name"
         %>
       <% end %>
     </div>
-    <%= link_to "What's nearby?", "" , class: "btn btn-rounded" %>
   </div>
 </div>
 
@@ -18,25 +17,25 @@
 <div class="container-btn-filters">
   <div class="btn-filter-list">
     <div class="btn-filter-home" id="btn-filter-left">
-      <%= link_to bars_path(tag: "Bar") do %>
+      <%= link_to bars_path(tag_category: "Bar") do %>
         <%= svg('icon-beer') %>
         <p>Bar</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
-      <%= link_to bars_path(tag: "Nightclub") do %>
+      <%= link_to bars_path(tag_category: "Nightclub") do %>
         <%= svg('icon-nightclub') %>
         <p>Nightclub</p>
       <% end %>
     </div>
     <div class="btn-filter-home">
-      <%= link_to bars_path(tag: "Lounge") do %>
+      <%= link_to bars_path(tag_category: "Lounge") do %>
         <%= svg('icon-lounge') %>
         <p>Lounge</p>
       <% end %>
     </div>
     <div class="btn-filter-home" id="btn-filter-right">
-      <%= link_to bars_path(tag_2: true) do %>
+      <%= link_to bars_path(tag_terrace: true) do %>
         <%= svg('icon-terrasse') %>
         <p>Terrace</p>
       <% end %>
@@ -55,27 +54,29 @@
 <!-- Trendy bars section -->
 <div class="homepage-container">
   <div class="homepage-group">
-    <h1 id="trendy-typo">Trendy Places</h1>
-    <div class="glide-1 glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides" style="list-style: none;">
-          <% @bars.each do |bar|  %>
-            <%= link_to bar_path(bar, redirection: "home") do %>
-              <li class="glide__slide">
-                <%= render "pages/cards/card-bar-larg", bar: bar%>
-              </li>
-            <% end %>
+    <h1>Trendy bars</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <% @trendy_bars.each do |bar| %>
+          <% if bar == @trendy_bars.first %>
+            <div class="carousel-item active">
+          <% else %>
+            <div class="carousel-item">
           <% end %>
-        </ul>
+              <%= link_to bar_path(bar, redirection: "home") do %>
+                <%= render "pages/cards/card-bar-larg", bar: bar%>
+              <% end %>
+            </div>
+        <% end %>
       </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 
@@ -83,57 +84,61 @@
   <div class="homepage-group">
     <div class="title-with-btn">
       <h2>Events nearby</h2>
-      <%= link_to  "Show all", "", class: "btn btn-rounded" %>
+      <%= link_to  "Show all", events_path, class: "btn btn-rounded" %>
     </div>
-    <div class="glide-2 glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides" style="list-style: none;">
-          <% @events.each do |event|  %>
-            <%= link_to event_path(event, redirection: "home") do %>
-              <li class="glide__slide">
-                <%= render "pages/cards/card-event-small", event: event %>
-              </li>
-            <% end %>
-          <% end %>
-        </ul>
+    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <% @events.each do |event_items| %>
+          <div class="<%= event_items == @events.first ? 'carousel-item active' : 'carousel-item' %>">
+            <div class="splitted">
+              <% event_items.each do |event| %>
+                <%= link_to event_path(event, redirection: "home") do %>
+                  <%= render "pages/cards/card-event-small", event: event%>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 
-<!-- Based on your profile section -->
+<!-- Bars nearby section -->
   <div class="homepage-group">
     <div class="title-with-btn">
       <h2>Bars nearby</h2>
-      <%= link_to  "Show all", "", class: "btn btn-rounded" %>
+      <%= link_to  "Show all", bars_path, class: "btn btn-rounded" %>
     </div>
-    <div class="glide-2 glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <% @bars.each do |bar|  %>
-            <li class="glide__slide">
-              <%= link_to bar_path(bar, redirection: "home") do %>
-                  <%= render "pages/cards/card-bar-small", bar: bar%>
+    <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <% @bars_nearby.each do |bar_items| %>
+          <div class="<%= bar_items == @bars_nearby.first ? 'carousel-item active' : 'carousel-item' %>">
+            <div class="splitted">
+              <% bar_items.each do |bar| %>
+                <%= link_to bar_path(bar, redirection: "home") do %>
+                  <%= render "pages/cards/card-bar-small", bar: bar %>
+                <% end %>
               <% end %>
-            </li>
-          <% end %>
-        </ul>
+            </div>
+          </div>
+        <% end %>
       </div>
-        <div class="glide__arrows" data-glide-el="controls">
-          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 
@@ -148,4 +153,6 @@
       <i class="fas fa-expand-alt"></i>
     <% end %>
   </div>
+</div>
+
 
