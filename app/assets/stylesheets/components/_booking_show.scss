@@ -1,53 +1,35 @@
-.card-event-show {
+.card-booking-show {
   margin-top: 32px;
-  padding: 32px 8px;
+  padding: 32px 16px;
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-event-bar-name {
+.card-booking-bar-name {
   display: flex;
   justify-content: center;
   margin-bottom: 32px;
 }
 
-.card-event-show-category {
-  color:#D83F87;
-}
 
-.card-event-show-buttons {
-  margin-top: 32px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.card-event-price-grey {
-  color: grey;
-}
-
-.card-event-show-map {
-  position: relative;
-}
-
-.img-event-show {
-  height: 335px;
+.img-booking-show {
+  height: 200px;
   img {
-    height: 335px;
+    height: 200px;
     width: 100%;
     object-fit: cover;
   }
 }
 
-.event-category{
+.booking-title-show{
   position: absolute;
-  right: 8px;
-  top: 302px;
+  right: 10px;
+  top: 172px;
   display: flex;
-  background-color: $pink;
   border-radius: 5px;
   padding: 4px;
-  width: 180px;
+  width: 356.25px;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -59,3 +41,16 @@
     color: white;
   }
 }
+
+  #table-show {
+    background-color: #23CE6B;
+  }
+  #guest-list-show {
+    background-color: #0E273C;
+  }
+
+  .guests-list {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }

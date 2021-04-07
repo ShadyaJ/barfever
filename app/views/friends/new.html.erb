@@ -1,0 +1,26 @@
+<div class="friend-container">
+  <div class="friend-forme">
+    <div class="cross-back-btn">
+      <%= link_to bar_path(@booking.bar) do %>
+        <i class="fas fa-times"></i>
+      <% end %>
+    </div>
+    <p class="friend-title">Add Friends</p>
+    <%= simple_form_for [ @booking, @friend ] do |f| %>
+      <%= f.input :first_name, label: "First name" %>
+      <%= f.input :last_name, label: "Last name" %>
+      <%= f.submit "Add friend", class: "friend-btn" %>
+    <% end %>
+    <% if  @booking.friends %>
+      <p>Your friends added :</p>
+    <% end %>
+    <% @booking.friends.each do |friend| %>
+      <ul>
+        <li><%= "#{friend.first_name.capitalize} #{friend.last_name.capitalize}" %></li>
+      </ul>
+    <% end %>
+    <div class="friend-btn",>
+      <%= link_to "Submit",  bookings_path %>
+    </div>
+  </div>
+</div>

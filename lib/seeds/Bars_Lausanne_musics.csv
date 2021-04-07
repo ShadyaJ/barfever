@@ -1,19 +1,17 @@
-,music_style,,,,,
-,Jazz,,,,,
-,Soul,,,,,
-,Rock,,,,,
-,Pop,,,,,
-,Dance/Electro,,,,,
-,Latino,,,,,
-,80s Music,,,,,
-,70s Music,,,,,
-,Indie,,,,,
-,Disco,,,,,
-,French pop,,,,,
-,Alternative,,,,,
-,Metal,,,,,
-,Lounge,,,,,
-,French pop,,,,,
-,Classique,,,,,
-,RnB,,,,,
-,Funk,,,,,
+Name,color
+French pop,#f56342
+80s Music,#e3c439
+70s Music,#93bf60
+Disco,#cdd929
+Hip-Hop,#4d8f87
+Pop,#c9c5af
+Latino,#f5bf42
+Dance/Electro,#d9f5ab
+Rock,#6b4239
+Indie,#2dd6d1
+Classique,#decac5
+Jazz,#877820
+Soul,#e04422
+RnB,#f5e690
+Funk,#cc27cf
+Meta,#db72d4

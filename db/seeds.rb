@@ -83,7 +83,7 @@ csv_text_musics = File.read(Rails.root.join('lib', 'seeds', 'Bars_Lausanne_music
 csv_musics = CSV.parse(csv_text_musics, :headers => true, :encoding => 'ISO-8859-1')
 csv_musics.each do |row|
   t = Music.new
-  t.name = row['music_style']
+  t.name = row['Name']
   # need to add photos later when we have cloudinary
   t.save!
 end
@@ -94,10 +94,10 @@ csv_text_bar_musics = File.read(Rails.root.join('lib', 'seeds', 'Bars_Lausanne_b
 csv_bar_musics = CSV.parse(csv_text_bar_musics, :headers => true, :encoding => 'ISO-8859-1')
 csv_bar_musics.each do |row|
   t = BarMusic.new
-  t.music = Music.find_by(name: row['music_style'])
-  t.bar = Bar.find_by(name: row['bar'])
+  t.music = Music.find_by(name: row['Music_style'])
+  t.bar = Bar.find_by(name: row['Bar'])
   # need to add photos later when we have cloudinary
-  puts "Create #{row['music_style']} - #{row['bar']}"
+  puts "Create #{row['Music_style']} - #{row['Bar']}"
   t.save!
 end
 

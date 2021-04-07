@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_02_141136) do
+ActiveRecord::Schema.define(version: 2021_04_03_095127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,17 @@ ActiveRecord::Schema.define(version: 2021_04_02_141136) do
     t.index ["user_id"], name: "index_bars_on_user_id"
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "bar_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "date"
+    t.boolean "type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["bar_id"], name: "index_bookings_on_bar_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "category"
     t.text "description"
@@ -55,6 +66,15 @@ ActiveRecord::Schema.define(version: 2021_04_02_141136) do
     t.string "photo_url_1"
     t.integer "price"
     t.index ["bar_id"], name: "index_events_on_bar_id"
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.bigint "booking_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["booking_id"], name: "index_friends_on_booking_id"
   end
 
   create_table "musics", force: :cascade do |t|
@@ -103,4 +123,7 @@ ActiveRecord::Schema.define(version: 2021_04_02_141136) do
   add_foreign_key "bar_musics", "bars"
   add_foreign_key "bar_musics", "musics"
   add_foreign_key "bars", "users"
+  add_foreign_key "bookings", "bars"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "friends", "bookings"
 end
