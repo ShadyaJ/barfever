@@ -2,8 +2,10 @@
 <div class='devise-container'>
 
   <div class="forme-login">
-    <div class="welcome-skip-btn">
-      <%= link_to 'Skip', root_path %>
+    <div class="cross-back-btn">
+      <%= link_to root_path do %>
+            <i class="fas fa-times"></i>
+      <% end %>
     </div>
     <h2>Log in</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

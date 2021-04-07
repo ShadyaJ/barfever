@@ -19,7 +19,7 @@
     <% end %>
 <% end %>
 
-<div class="img-show">
+<div class="img-event-show">
   <img src="<%= @event.photo_url_1 %>">
 </div>
 
@@ -39,8 +39,13 @@
 
     </div>
     <div class="card-event-show-buttons">
-      <%= link_to "Guest List", "#", class: "btn btn-event-guest" %>
-      <%= link_to "Book Table", "#", class: "btn btn-event-book" %>
+      <% if user_signed_in? %>
+        <%= link_to "Guest List", new_event_booking_bar_bookings_path(@event.bar), class: "btn btn-pink" %>
+        <%= link_to "Book Table", new_event_booking_bar_bookings_path(@event.bar), class: "btn btn-outline-pink" %>
+      <% else %>
+        <%= link_to "Guest List", welcome_path, class: "btn btn-pink" %>
+        <%= link_to "Book Table", welcome_path, class: "btn btn-outline-pink" %>
+      <% end %>
     </div>
   </div>
 </div>

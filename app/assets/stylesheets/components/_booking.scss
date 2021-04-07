@@ -1,0 +1,69 @@
+.booking-container {
+  padding: 10px 8px;
+}
+
+.booking-btn {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    background-color: $purple;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+
+.booking-forme {
+  background-color: white;
+  padding: 30px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.skip-btn a {
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  color: grey;
+  padding: 10px;
+  &:hover {
+    color: $purple;
+  }
+}
+
+.booking-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.booking-subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.table-check {
+  p {
+    font-size: 16px;
+  }
+  margin-bottom: 20px;
+}

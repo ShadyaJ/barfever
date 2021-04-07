@@ -1,0 +1,30 @@
+<div class="booking-container">
+  <div class="booking-forme">
+    <div class="cross-back-btn">
+      <%= link_to bar_path(@bar) do %>
+        <i class="fas fa-times"></i>
+      <% end %>
+    </div>
+    <p class="booking-title">Guest List form for:</p>
+    <h2 class="booking-subtitle"> <%= @bar.name %></h2>
+    <%= simple_form_for [ @bar, @booking ] do |f| %>
+    <div class="table-check">
+    <%= f.input :date, label: "Select the day" %>
+    <p>Do you want to book a table?</p>
+     <div class="form-check">
+        <input class="form-check-input" type="radio" name="booking[table_booking?]" value="1" id="table1">
+        <label class="form-check-label" for="table1">
+          Yes
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="booking[table_booking?]" value="0" id="table2" checked>
+        <label class="form-check-label" for="table2">
+          No
+        </label>
+      </div>
+    </div>
+      <%= f.submit "Add me on Guest List", class: "booking-btn" %>
+    <% end %>
+  </div>
+</div>
