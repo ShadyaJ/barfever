@@ -1,6 +1,10 @@
 // homepage
 
 //div btn sans btn event
+.container-btn-filters {
+  margin-top: 15px;
+}
+
 .btn-filter-list {
   display: flex;
   justify-content: space-evenly;
@@ -59,15 +63,6 @@
   justify-content: center;
 }
 
-// specifities
-#btn-filter-left {
-
-}
-
-#btn-filter-right {
-
-}
-
 // homepage
 // index bars
 .filters-index {
@@ -85,6 +80,7 @@
     }
   }
   .dropdown-menu {
+    transform: translate3d(0px, 31px, 0px)!important;
     div {
       float: left;
       width: 96%;
